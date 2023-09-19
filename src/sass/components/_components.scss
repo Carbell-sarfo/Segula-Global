@@ -160,7 +160,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    border-radius: 3rem;
+    // border-radius: .5rem;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.542);
 
     &:hover, &:focus {
@@ -183,15 +183,15 @@
         @include ease(.4s);
     }
 }
-.btn-primary {
-    background-color: var(--clr-green);
+.btn-blue {
+    background-color: var(--clr-blue-light);
     color: #fff;
-    border: 2px solid var(--clr-cream);
+    border: 2px solid var(--clr-blue-light);
 
     &:hover, &:focus {
-      background-color: var(--clr-cream);
-      color: var(--clr-green);
-      border: 2px solid var(--clr-green);
+      background-color: var(--clr-white);
+      color: var(--clr-blue-light);
+      border: 2px solid var(--clr-blue-light);
     }
 }
 .btn-neutral {
