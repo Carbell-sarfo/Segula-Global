@@ -15,6 +15,12 @@
             border: none;
             resize: none;
             border-radius: .5rem;
+            border: 2px solid transparent;
+            transition: .2s;
+
+            &:focus, &:valid {
+                border: 2px solid var(--clr-blue-light);
+            }
         }
     }
 }

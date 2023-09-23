@@ -780,6 +780,11 @@ footer p {
   border: none;
   resize: none;
   border-radius: 0.5rem;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+.contact-form .input-field input:focus, .contact-form .input-field input:valid, .contact-form .input-field textarea:focus, .contact-form .input-field textarea:valid, .contact-form .input-field select:focus, .contact-form .input-field select:valid {
+  border: 2px solid var(--clr-blue-light);
 }
 
 .slick-dots {
