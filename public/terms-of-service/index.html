@@ -167,7 +167,7 @@
                 </ul>
             </div>
 
-            <form class="contact-form" name="Contact Form" method="POST" data-netlify="true">
+            <form class="contact-form" name="Contact-Form" method="POST" data-netlify="true" action="/form-success/">
                 <h2 class="heading-secondary">Send a message</h2>
                 <div class="input-field">
                     <label for="fname">Full Name</label>
@@ -183,19 +183,19 @@
                 </div>
                 <div class="input-field">
                     <select name="Service" id="lang" required>
-                        <option value="javascript">I want Segula Global to help me with</option>
-                        <option value="php">Optimize my Linkedin profile</option>
-                        <option value="php">Photography &amp; Videography</option>
-                        <option value="java">Logo Design and Branding</option>
-                        <option value="golang">Create my podcast</option>
-                        <option value="python">Other</option>
+                        <option value="No-choice">I want Segula Global to help me with</option>
+                        <option value="Optimize LinkedIn Profile">Optimize my Linkedin profile</option>
+                        <option value="Photography and videography">Photography &amp; Videography</option>
+                        <option value="Logo Design and Branding">Logo Design and Branding</option>
+                        <option value="Podcast">Create my podcast</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>      
                 <div class="input-field">
                     <label for="message">Add a message</label>
                     <textarea name="message" id="message" cols="30" rows="10" required></textarea>
                 </div>   
-                <input type="button" value="Send" class="btn btn-blue">       
+                <input type="submit" value="Send" class="btn btn-blue">       
             </form>
          </div>
     </div>
