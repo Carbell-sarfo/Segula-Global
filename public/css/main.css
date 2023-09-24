@@ -328,9 +328,6 @@ section {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.242);
   transform: translateY(-3px);
 }
-.btn:hover::after, .btn:focus::after {
-  top: 0%;
-}
 
 .btn-blue {
   background-color: var(--clr-blue-light);

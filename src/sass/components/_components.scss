@@ -169,10 +169,6 @@
         transform: translateY(-3px);
     }
 
-    &:hover::after, &:focus::after {
-        top: 00%;
-    }
-
 }
 .btn-blue {
     background-color: var(--clr-blue-light);
