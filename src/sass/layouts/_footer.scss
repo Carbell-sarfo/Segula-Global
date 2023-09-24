@@ -217,3 +217,18 @@ footer {
         flex-direction: column;    
     }
 }
+
+@media screen and (max-width: 600px) {
+    .section-contact .contact-container {
+        padding: 1rem;
+
+        h1 {
+            line-height: 1;
+        }
+
+        form {
+            padding: 2rem;
+            padding-bottom: 3rem;
+        }
+    }
+}

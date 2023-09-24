@@ -763,6 +763,18 @@ footer p {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 600px) {
+  .section-contact .contact-container {
+    padding: 1rem;
+  }
+  .section-contact .contact-container h1 {
+    line-height: 1;
+  }
+  .section-contact .contact-container form {
+    padding: 2rem;
+    padding-bottom: 3rem;
+  }
+}
 .contact-form {
   text-align: left;
   width: 100%;
@@ -787,6 +799,11 @@ footer p {
   border: 2px solid var(--clr-blue-light);
 }
 
+@media screen and (max-width: 600px) {
+  .contact form {
+    text-align: center;
+  }
+}
 .slick-dots {
   position: absolute;
   bottom: -45px;
