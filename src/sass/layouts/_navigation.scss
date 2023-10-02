@@ -1,16 +1,16 @@
 .nav-scrolled {
-    --clr-green: #fff;
-    --clr-cream: #4d795a;
+    --clr-green: #D3D0D0;
+    --clr-cream: #E7C383;
 }
 
 .nav-bar {
     width: 100%;
-    height: 80px;
+    height: 85px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
-    background: var(--clr-green);
+    background: var(--clr-blue-dark);
     box-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.349);
 
     .nav-container {
@@ -32,13 +32,13 @@
         transform: translate(0px, -50%);
 
         &:hover .lines {
-            background-color: var(--clr-gray-dark);
+            background-color: var(--clr-blue-light);
         }
 
         .lines {
             width: 3rem;
             height: .3rem;
-            background-color: var(--clr-cream);
+            background-color: var(--clr-white);
             @include ease(.5s);
 
             &:not(:last-child) {
@@ -69,11 +69,12 @@
         margin-bottom: 0;
 
         img {
-            width: 190px;
+            width: 150px;
             height: auto;
         }
     }
 
+    // Navigation Menu
     .nav-list {
         list-style: none;
 
@@ -84,13 +85,35 @@
                 margin-right: 4rem;
             }
 
-            a {
-                color: var(--clr-cream);
+            .nav-link {
+                color: var(--clr-blue-dark);
                 display: inline-block;
                 padding: 1rem 0;
                 font-family: inherit;
                 @include ease(.4s);
-                border-bottom: 2px solid transparent;
+                // border-bottom: 2px solid red;
+                position: relative;
+                z-index: 1;
+
+                &:hover::after,
+                &:focus::after {
+                    left: 50%;
+                    opacity: 1;
+                }
+
+                &::after {
+                    content: "";
+                    width: 1rem;
+                    height: 1rem;
+                    background: var(--clr-blue-light);
+                    position: absolute;
+                    top: 100%;
+                    left: -30%;
+                    opacity: 0;
+                    transform: (translateX(-50%));
+                    border-radius: 50%;
+                    transition: .4s ease;
+                }
                 
 
                 &:hover, &:focus {
@@ -126,9 +149,9 @@
             height: 100%;
             position: fixed;
             top: 0;
-            left: 0;
+            right: 0;
             z-index: -1;
-            background: rgb(var(--clr-green-rgb), .8);
+            background: rgb(var(--clr-gold-rgb), .8);
             backdrop-filter: blur(.1rem);
             display: flex;
             flex-direction: column;
@@ -136,7 +159,7 @@
             justify-content: center;
             text-align: center;
             @include ease(.4s);
-            transform: translate3d(-100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
 
             .nav-item {
                 opacity: 0;
@@ -170,6 +193,13 @@
                 &:not(:last-child) {
                     margin-bottom: 2rem;
                 }
+
+                .nav-link {
+
+                    &::after {
+                        background: var(--clr-white);
+                    }
+                }
             }
 
             &.show {
@@ -177,30 +207,6 @@
             }
         }
 
-        .nav-left {
-            width: 260px;
-            height: 200px;
-            background: rgb(var(--clr-white-rgb), .8);
-            backdrop-filter: blur(.1rem);
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column-reverse;
-            @include ease (.4s);
-            transform: translate3d(-100%, 0, 0);
-
-            &.show {
-                transform: translate3d(0, 0, 0);
-            }
-
-            .left-social {
-                display: flex;
-                margin-top: 30px;
-            }
-        }
     }
 
     .nav-overlay {
@@ -233,32 +239,26 @@
             right: 10rem;
             transform: translate(00px, -50%);
 
-            li {
+            .nav-item {
                 
                 &:not(:last-child) {
-                    margin-right: 1rem;
+                    margin-right: 5rem;                
+                }
+
+                .nav-link {
+                    color: var(--clr-white);
+
+                    &:hover,
+                    &:focus {
+                        color: var(--clr-blue-light);
+                    }
                 }
             }
+
         }
     
         .nav-btn {
             display: none;
-        }
-
-        .nav-left {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translate(0, -50%);
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-
-            
-            .left-social {
-                display: flex;
-                margin-left: 20px;
-            }
         }
 
         .cart {

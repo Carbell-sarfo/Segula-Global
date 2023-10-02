@@ -111,7 +111,7 @@
     width: 50px;
     height: 50px;
     border-radius: 40%;
-    background: var(--clr-green);
+    background: var(--clr-blue-light);
     opacity: .8;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.473);
     display: flex;
@@ -123,12 +123,12 @@
     pointer-events: none;
 
     &:hover {
-        background-color: var(--clr-cream);
+        background-color: var(--clr-white);
         transform: translateY(-3px);
     }
 
     &:hover i, &:focus i {
-        color: var(--clr-green);
+        color: var(--clr-blue-light);
     }
 
     i {
