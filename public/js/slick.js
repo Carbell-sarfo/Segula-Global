@@ -1,7 +1,7 @@
 
 // About Gallery
 $(document).ready(function(){
-    $('.about-gallery').slick({
+    $('.services-gallery').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,

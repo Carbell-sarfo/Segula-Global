@@ -1,3 +1,33 @@
+// ============================================================
+//                      Table of Content
+// ============================================================
+// 1. Font-face
+
+
+
+// 1. =============== Font-face ============
+@font-face {
+    font-family: "versailles";
+    src: url(/assets/fonts/e20c869a67f13952fad962e299fcf39f.woff);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "versailles";
+    src: url(/assets/fonts/vesailles-roman.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "versailles";
+    src: url(/assets/fonts/versailles-light.woff);
+    font-weight: lighter;
+    font-style: normal;
+}
+
+
+
+
 *,
 *::before,
 *::after {
@@ -8,8 +38,8 @@
 }
 
 :root {
-    --clr-blue-light: #00A1FF;
-    --clr-blue-dark: #011939;
+    --clr-primary: #00A1FF;
+    --clr-primary-dark: #011939;
     --clr-gold-light: #E7C383;
     --clr-gold-dark: #94774F;
     --clr-gold-rgb: 231, 194, 131;
@@ -32,13 +62,13 @@ body {
     line-height: 2.0;
     transition: all .4s ease-in-out;
     font-family: 'Open Sans', sans-serif;    
-    background: var(--clr-gray-light);
+    background: #f1f3f7;
     color: var(--clr-gray-dark-2);
     font-size: 1.6rem;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'versailles', serif;
 }
 p, i, span, article {
     font-family: inherit;

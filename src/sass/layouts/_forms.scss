@@ -19,7 +19,7 @@
             transition: .2s;
 
             &:focus, &:valid {
-                border: 2px solid var(--clr-blue-light);
+                border: 2px solid var(--clr-primary);
             }
         }
     }

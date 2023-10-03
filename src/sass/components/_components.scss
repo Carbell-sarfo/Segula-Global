@@ -2,97 +2,97 @@
 //   DARK MODE TOGGLE
 /////////////////////
   
-  .toggle-input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
+  // .toggle-input {
+  //   position: absolute;
+  //   opacity: 0;
+  //   cursor: pointer;
+  //   height: 0;
+  //   width: 0;
+  // }
   
-  .toggle-slot {
-    position: relative;
-    height: 4rem;
-    width: 8rem;
-    border: 4px solid #ffbb52;
-    border-radius: 10em;
-    background-color: white;
-    box-shadow: 0px 2px 6px rgba(228, 231, 236, 0.343);
-    transition: background-color 250ms;
-    cursor: pointer;
-  }
+  // .toggle-slot {
+  //   position: relative;
+  //   height: 4rem;
+  //   width: 8rem;
+  //   border: 4px solid #ffbb52;
+  //   border-radius: 10em;
+  //   background-color: white;
+  //   box-shadow: 0px 2px 6px rgba(228, 231, 236, 0.343);
+  //   transition: background-color 250ms;
+  //   cursor: pointer;
+  // }
   
-  .toggle-input:checked ~ .toggle-slot {
-    background-color: #1a1b1e;
-    border: 4px solid #e4e7ec;
-    box-shadow: 0px 2px 6px rgba(53, 60, 70, 0.335);
-  }
+  // .toggle-input:checked ~ .toggle-slot {
+  //   background-color: #1a1b1e;
+  //   border: 4px solid #e4e7ec;
+  //   box-shadow: 0px 2px 6px rgba(53, 60, 70, 0.335);
+  // }
   
-  .toggle-button {
-    transform: translate(4.2rem, -50%);
-    position: absolute;
-    top: 50%;
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    background-color: #ffeccf;
-    box-shadow: inset 0px 0px 0px 0.25em #ffbb52;
-    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
-  }
+  // .toggle-button {
+  //   transform: translate(4.2rem, -50%);
+  //   position: absolute;
+  //   top: 50%;
+  //   height: 2.5rem;
+  //   width: 2.5rem;
+  //   border-radius: 50%;
+  //   background-color: #ffeccf;
+  //   box-shadow: inset 0px 0px 0px 0.25em #ffbb52;
+  //   transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  // }
   
-  .toggle-input:checked ~ .toggle-slot .toggle-button {
-    background-color: #1a1b1e;
-    box-shadow: inset 0px 0px 0px 0.25em white;
-    transform: translate(0.3rem, -50%);
-  }
+  // .toggle-input:checked ~ .toggle-slot .toggle-button {
+  //   background-color: #1a1b1e;
+  //   box-shadow: inset 0px 0px 0px 0.25em white;
+  //   transform: translate(0.3rem, -50%);
+  // }
   
-  .sun-icon {
-    position: absolute;
-    height: 2.8rem;
-    width: 2.8rem;
-    color: #ffbb52;
-  }
+  // .sun-icon {
+  //   position: absolute;
+  //   height: 2.8rem;
+  //   width: 2.8rem;
+  //   color: #ffbb52;
+  // }
   
-  .sun-icon-wrapper {
-    position: absolute;
-    height: 3.5rem;
-    width: 3.5rem;
-    opacity: 1;
-    transform: 
-                translate(0.2rem, 0.2rem) 
-                rotate(15deg);
-    transform-origin: 50% 50%;
-    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
-  }
+  // .sun-icon-wrapper {
+  //   position: absolute;
+  //   height: 3.5rem;
+  //   width: 3.5rem;
+  //   opacity: 1;
+  //   transform: 
+  //               translate(0.2rem, 0.2rem) 
+  //               rotate(15deg);
+  //   transform-origin: 50% 50%;
+  //   transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  // }
   
-  .toggle-input:checked ~ .toggle-slot .sun-icon-wrapper {
-    opacity: 0;
-    transform: translate(3em, 2em) rotate(0deg);
-  }
+  // .toggle-input:checked ~ .toggle-slot .sun-icon-wrapper {
+  //   opacity: 0;
+  //   transform: translate(3em, 2em) rotate(0deg);
+  // }
   
-  .moon-icon {
-    position: absolute;
-    height: 2.8rem;
-    width: 2.8rem;
-    color: white;
-  }
+  // .moon-icon {
+  //   position: absolute;
+  //   height: 2.8rem;
+  //   width: 2.8rem;
+  //   color: white;
+  // }
   
-  .moon-icon-wrapper {
-    position: absolute;
-    height: 3.5em;
-    width: 3.5em;
-    opacity: 0;
-    transform: 
-                // translate(11rem, 2em) 
-                rotate(0deg);
-    transform-origin: 50% 50%;
-    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
-  }
+  // .moon-icon-wrapper {
+  //   position: absolute;
+  //   height: 3.5em;
+  //   width: 3.5em;
+  //   opacity: 0;
+  //   transform: 
+  //               // translate(11rem, 2em) 
+  //               rotate(0deg);
+  //   transform-origin: 50% 50%;
+  //   transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+  // }
   
-  .toggle-input:checked ~ .toggle-slot .moon-icon-wrapper {
-    opacity: 1;
-    transform: translate(4.5rem, -0.3rem) rotate(-15deg);
-  }
+  // .toggle-input:checked ~ .toggle-slot .moon-icon-wrapper {
+  //   opacity: 1;
+  //   transform: translate(4.5rem, -0.3rem) rotate(-15deg);
+  // }
 
 
 
@@ -111,7 +111,7 @@
     width: 50px;
     height: 50px;
     border-radius: 40%;
-    background: var(--clr-blue-light);
+    background: var(--clr-primary);
     opacity: .8;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.473);
     display: flex;
@@ -128,7 +128,7 @@
     }
 
     &:hover i, &:focus i {
-        color: var(--clr-blue-light);
+        color: var(--clr-primary);
     }
 
     i {
@@ -170,25 +170,25 @@
     }
 
 }
-.btn-blue {
-    background-color: var(--clr-blue-light);
+.btn-primary {
+    background-color: var(--clr-primary);
     color: #fff;
-    border: 2px solid var(--clr-blue-light);
+    border: 2px solid var(--clr-primary);
 
     &:hover, &:focus {
       background-color: var(--clr-white);
-      color: var(--clr-blue-light);
-      border: 2px solid var(--clr-blue-light);
+      color: var(--clr-primary);
+      border: 2px solid var(--clr-primary);
     }
 }
 .btn-neutral {
-    background-color: var(--clr-cream);
+    background-color: var(--clr-white);
     color: #000;
     border: 2px solid var(--clr-green);
 
     &:hover, &:focus {
-      background-color: #fff;
-      color: Var(--clr-black);
+      background-color: var(--clr-gray-light);
+      color: Var(--clr-primary);
     }
 }
 .btn-thin {

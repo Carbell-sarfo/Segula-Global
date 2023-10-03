@@ -10,7 +10,7 @@
     top: 0;
     left: 0;
     z-index: 10;
-    background: var(--clr-blue-dark);
+    background: var(--clr-primary-dark);
     box-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.349);
 
     .nav-container {
@@ -32,7 +32,7 @@
         transform: translate(0px, -50%);
 
         &:hover .lines {
-            background-color: var(--clr-blue-light);
+            background-color: var(--clr-primary);
         }
 
         .lines {
@@ -86,7 +86,7 @@
             }
 
             .nav-link {
-                color: var(--clr-blue-dark);
+                color: var(--clr-primary-dark);
                 display: inline-block;
                 padding: 1rem 0;
                 font-family: inherit;
@@ -105,7 +105,7 @@
                     content: "";
                     width: 1rem;
                     height: 1rem;
-                    background: var(--clr-blue-light);
+                    background: var(--clr-primary);
                     position: absolute;
                     top: 100%;
                     left: -30%;
@@ -250,7 +250,7 @@
 
                     &:hover,
                     &:focus {
-                        color: var(--clr-blue-light);
+                        color: var(--clr-primary);
                     }
                 }
             }
