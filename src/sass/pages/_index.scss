@@ -1,3 +1,18 @@
+// Table of Content
+// 1. Coming soon page
+// 2. Section-hero
+// 3. About us section
+// 4. Section Services
+// 5. Section Banner
+// 6. Section Proposition
+// 7. Section Testimonials
+// 8. Section packages.
+
+
+
+
+
+
 // coming soon page
 .section-coming {
     width: 100%;
@@ -44,27 +59,28 @@
 }
 
 
-
-
 // == Section-hero ==
 .section-hero {
     width: 100%;
     min-height: 100vh;
-    background-image: url(/assets/home-bg.png);
-    background-size: cover;
-    background-position: left;
-    background-attachment: fixed;
+    background-color: var(--clr-primary-dark);
+    // background-size: cover;
+    // background-position: left;
+    // background-attachment: fixed;
     @include ease(.4s);
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
+    clip-path: polygon(0% 0, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    padding-top: 80px;
+
 
     &#hero {
-        padding-top: 0;
+        // padding-top: 0;
     }
 
     .hero-container {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         padding-bottom: 7rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -79,9 +95,6 @@
             z-index: 2;
             margin-top: 10px;
             
-        }
-        .hero-text {
-            margin-top: 100px;
         }
 
         h3 {
@@ -143,10 +156,9 @@
 
 
 
-
 // ====================== About Us ========================
 .section-about {
-    padding: 10rem 0 15rem;
+    padding: 13rem 0 10rem;
 
 }
 // End of About Us
@@ -156,6 +168,7 @@
 // ====================== Section services ===================
 .section-services {
     padding: 10rem 0 15rem;
+    text-align: center;
 
     .services-gallery {
         // display: grid;
@@ -163,18 +176,26 @@
         // grid-template-columns: 1fr 1fr;
         position: relative;
         padding: 3rem 0;
+        margin-bottom: 12rem;
 
-        img {
-            line-height: 1;
-            transition: .4s;
+        .service {
+            text-align: center;
 
-            &:hover, &:focus {
-                transform: scale(1.03);
-                box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.226);
-            }
-
-            &:not(:last-child) {
-                margin-right: 2rem;
+            img {
+                height: 200px;
+                display: inline-block;
+                width: auto;
+                line-height: 1;
+                transition: .4s;
+    
+                &:hover, &:focus {
+                    transform: scale(1.03);
+                    box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.226);
+                }
+    
+                &:not(:last-child) {
+                    margin-right: 2rem;
+                }
             }
         }
 
@@ -284,28 +305,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ================ Section Value Proposition ===============
 .section-value {
     Padding: 10rem 0;
@@ -366,51 +365,50 @@
 // ================= SECTION TESTIMONIAL ===================
 .section-testimonials {
     padding: 15rem 0;
-    background: var(--clr-gray-light);
+    // background-image: linear-gradient(to bottom, rgba(0, 135, 99, 0.889), rgba(18, 54, 44, 0.922)), url(/assets/testimonial-background.png);
+    // background-size: cover;
+    // background-position: cover;
+    // background-attachment: fixed;
+    clip-path: polygon(0% 0, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    position: relative;
+    overflow: hidden;
 
-    .testimonials-container {
-        position: relative;
-        // padding: 0rem 50px 5rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-        width: 100%;
-        max-width: 800px;
-
-        .slick-arrow {
-            position: absolute;
-            bottom: 0;
-            width: 5rem;
-            height: 5rem;
-            border-radius: 50%;
-            z-index: 1;
-            background-color: #becefb;
-            transition: .3s;
-
-            &:hover, &:focus {
-                background-color: var(--clr-green);
-            }
-
-            i {
-                color: var(--clr-white);
-                font-size: 2rem;
-            }
-        }
-        .slick-next {
-            right: 15px;
-            top: 100%;
-            transform: translateY(5px);
-        }
-        .slick-prev {
-            left: 15px;
-            top: 100%;
-            transform: translateY(5px);
-        }
+    &:hover > .container .slick-slider .slick-arrow{
+        color: var(--clr-primary);
+        background-color: var(--clr-gold-light);
     }
 
-    
-      .testimonial {
-        // background: var(--clr-white);
+    .overlay {
+        background-image: linear-gradient(to bottom, rgba(0, 135, 99, 0.889), rgba(18, 54, 44, 0.922));
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .video-bg {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+    .slick-slider {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top: 5rem;
+        padding-inline: 5rem;
+        position: relative;
+        // overflow: visible;
+    }
+
+    .testimonial {
+        background: var(--clr-white);
         width: 100%;
         // max-width: 800px;
         text-align: center;
@@ -418,39 +416,103 @@
         @include ease(.4s);
         padding: 2.5rem 2rem;
         @include ease(.3s);
-        border-bottom: 2px solid var(--clr-primary);
+        border-bottom: 2px solid var(--clr-gold-light);
+        margin-inline: 1rem;
 
         &:hover {
-            // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.129);
-            // transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.129);
+            transform: translateY(-3px);
         }
 
 
         &__text {
-            // font-size: 1.5rem;
-            // display: none;
+            font-size: 1.5rem;
+            display: none;
         }
 
         &__img {
             width: auto;
             height: 100px;
             margin: 0rem auto;
-            border: 1px solid var(--clr-primary);
+            border: 2px solid var(--clr-gold-light);
             border-radius: 50%;
+            // margin-top: -5rem;
         }
 
         &__name {
-            text-align: center;
-            margin-bottom: 3rem;
+            // text-align: center;
+            // margin-bottom: 3rem;
         }
 
-        
-    
     }
 }
 // end of testionial section
 
 
+
+// =================== Section Packages -=======================
+.section-packages {
+    padding: 15rem 0;
+
+    .package {
+        box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.123);
+        border-radius: 1rem;
+        text-align: center;
+        overflow: hidden;
+        transition: .4s;
+    
+        &:hover {
+            transform: translateY(-4px);
+        }
+    
+        .green-gradient {
+            background-image: linear-gradient(to bottom, #008764, #12362C);
+        }
+        .gold-gradient {
+            background-image: linear-gradient(to bottom, #E7C383, #94774F);
+        }
+    
+        // package head
+        .package__head {
+            padding: 4rem 0;
+            color: var(--clr-white);
+            clip-path: ellipse(100% 55% at 48% 44%);
+    
+            h1 {
+                font-size: 6rem;
+                line-height: 1;
+                margin-left: -3rem;
+    
+                span {
+                    display: inline-block;
+                    font-size: 1rem;
+                    margin-top: -5rem;
+                    margin-right: 1rem;
+                    vertical-align: super;
+                }
+            }
+        }
+    
+        // package body
+        .package__text {
+            padding: 3rem;
+    
+            .package-list {
+                list-style: none;
+    
+                li {
+                    
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                        border-bottom: 1px solid var(--clr-primary);
+                    }
+                }
+            }
+        }
+    
+    }
+}
+// End of packages
 
 
 
@@ -593,6 +655,17 @@
 
 @media screen and (min-width: 769px) {
 
+    .section-hero {
+
+        .hero-text {
+            margin-top: -10rem;
+        }
+
+        .btn-primary {
+            margin-right: 2rem;
+        }
+    }
+
     .section-about {
         
         .about-container {
@@ -659,6 +732,9 @@
 
         .testimonials-container {
             padding: 0;
+        }
+        .slick-slider {
+            padding-inline: 0;
         }
     }
     

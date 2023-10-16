@@ -176,7 +176,7 @@
     border: 2px solid var(--clr-primary);
 
     &:hover, &:focus {
-      background-color: var(--clr-white);
+      background-color: var(--clr-gold-light);
       color: var(--clr-primary);
       border: 2px solid var(--clr-primary);
     }
@@ -184,7 +184,7 @@
 .btn-neutral {
     background-color: var(--clr-white);
     color: #000;
-    border: 2px solid var(--clr-green);
+    border: 2px solid var(--clr-primary);
 
     &:hover, &:focus {
       background-color: var(--clr-gray-light);

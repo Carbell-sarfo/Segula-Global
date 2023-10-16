@@ -37,7 +37,7 @@ $(document).ready(function(){
 
   // Testimonial
   $(document).ready(function(){
-    $('.testimonials-container').slick({
+    $('.testimonials-slider').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,

@@ -23,9 +23,17 @@ layout: 'base.njk'
     <div class="container wrapper">
         <div class="hero-container">
             <div class="hero-text">
-                <h1 class="hero-name">Elevate your presence, expand your reach, and create a meaningful influence.</h1>
-                <a href="#" class="btn btn-primary">Lorem Ipsum</a>
+                <h1 class="hero-name">Designing online identities, driving Real-world impact.</h1>
+                <p class="white-text">Our clients leave an indelible impact, not merely an impression
+leave a lasting impact, not just a passing impression
+</p>
+                <div>
+                    </div><a href="/pages/services/" class="btn btn-primary">Our Brand Solutions</a>
+                    <a href="/pages/meeting" class="btn btn-neutral">Schedule a Strategy meeting</a>
             </div>
+            <div class="hero-img">
+                <img src="/assets/hero-img.png" alt="Segula Global hero image" />
+          </div>
         </div>
     </div>
 </section>
@@ -35,16 +43,22 @@ layout: 'base.njk'
 {# ========================= Section About ======================= #}
 <section class="section-about" id="about">
     <div class="container wrapper">
-        <h1 class="heading-secondary">Who We Are</h1>
+        <div class="text-center mb-50">
+            <h1 class="heading-secondary">Who We Are</h1>
+        </div>
         <div class="col-1-2">
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus quidem repellendus laboriosam quibusdam debitis! Amet velit labore, eaque aspernatur corrupti vitae mollitia eligendi, animi, libero illum voluptates rerum magni.</p>
+            <div class="fade-in">
+                <p>At Segula Global, we are more than just a social enterprise; we are architects of transformative leadership. Our unwavering commitment to empowering purpose-driven leaders is the driving force behind our existence.</p>
                 <br>
-                <p class="mb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus cumque ratione aliquam corrupti nisi sapiente voluptatibus distinctio eos, odio quas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus expedita facilis laudantium obcaecati maiores accusantium harum modi, eos hic, itaque perferendis, deserunt numquam soluta voluptas earum veniam eveniet vero voluptate!</p>
-                <a href="#" class="btn btn-primary">All About Us</a>
+                <h3 class="heading-tertiary">Our Mission</h3>
+                <p class="mb-20">We leverage the power of social media to foster inclusivity, drive positive change, and inspire the next generation of transformative leadership. Our vision is to be a trailblazing social enterprise that empowers leaders to drive social impact and inspire change.</p>
+
+                <h3 class="heading-tertiary">What Sets Us Apart</h3>
+                <p>Our unique value proposition goes beyond mere social media consulting. We curate thought-provoking content, refine the "why" of purpose-driven leaders, and inspire the next generation through powerful storytelling. We are dedicated to creating global citizens who use social media as a tool to drive positive change.At Segula Global, our clients are not just remembered; they leave a profound and enduring impact on the world.</p>
+                <a href="/pages/about/" class="btn btn-primary mt-20">All About Us</a>
             </div>
-            <div>
-                <img src="/assets/about.png" alt="team of Segula Global">
+            <div class="fade-in">
+                <img src="/assets/who-we-are.png" alt="team of Segula Global">
             </div>
         </div>
     </div>
@@ -52,43 +66,62 @@ layout: 'base.njk'
 {# End of Section About #}
 
 
-{# ========================= Section services ======================= #}
-<section class="section-services" id="services">
-    <div class="container wrapper">
-        <h1 class="heading-secondary">Our Services</h1>
-
-        <div class="services-gallery">
-            <img src="/assets/services-1.png" alt="baby">
-            <img src="/assets/services-2.png" alt="baby">
-            <img src="/assets/services-1.png" alt="baby">
-            <img src="/assets/services-2.png" alt="baby">
-            <img src="/assets/services-1.png" alt="baby">
-            <img src="/assets/services-2.png" alt="baby">
-        </div>
-    </div>
-</section>
-{# End of Services #}
-
 
 {# ========================= Section-Banner =================== #}
 <section class="section-banner">
     <video autoplay loop muted src="/assets/video-bg.mp4" class="video"> your browser does not support video tag</video>
     <div class="overlay"></div>
-    <div class="container wrapper">
+    <div class="container wrapper fade-in">
         <h1>Elevate your presence, <br> expand your meaningful <br> influence.</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             <br>
             Voluptatem ex dolore repellat ut, harum soluta voluptate iure a est molestiae, rem explicabo dicta quia repudiandae <br> nihil amet eos beatae veniam?
             </p>
-
-            <a href="#section-contact" class="btn btn-neutral"> Schedule a consultation </a>
+            <a href="/pages/meeting/" class="btn btn-neutral"> Schedule a consultation </a>
     </div>
 </section> 
 {# End of section Banner #}
 
+{# ========================= Section services ======================= #}
+<section class="section-services" id="services">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h1 class="heading-secondary">Our Services</h1>
+        </div>
+
+        <div class="services-gallery mb-50">
+            <div class="service">
+                <img src="/assets/linkedin.png" alt="baby">
+                <h2>Linkedin Optimisation</h2>
+            </div>
+            <div class="service">
+                <img src="/assets/web-design.png" alt="baby">
+                <h2>Web Design</h2>
+            </div>
+            <div class="service">
+                <img src="/assets/Podcast-bro.png" alt="baby">
+                <h2>Podcast and Video production</h2>
+            </div>
+            <div class="service">
+                <img src="/assets/personal-brand.png" alt="baby">
+                <h2>Personal Branding</h2>
+            </div>
+            <div class="service">
+                <img src="/assets/photo-video.png" alt="baby">
+                <h2>Photo &amp; Video</h2>
+            </div>
+            <div class="service">
+                <img src="/assets/social-media.png" alt="baby">
+                <h2>Social Media Management</h2>
+            </div>
+        </div>
+        <a href="/pages/meeting/" class="btn btn-primary">Schedule a meeting</a>
+    </div>
+</section>
+{# End of Services #}
 
 {# ======================= Section Proposition ================= #}
-<section class="section-proposition">
+{# <section class="section-proposition">
     <div class="container wrapper">
         <h1 class="heading-secondary">What We Do</h1>
 
@@ -109,5 +142,98 @@ layout: 'base.njk'
             <img src="/assets/ash.png" alt="ash">
         </div>
     </div>
-</section>
+</section> #}
 {# End of Section Proposition #}
+
+
+
+{# =========================== Section Testimonial ===================== #}
+<div class='section-testimonials'>
+    <video autoPlay muted loop class='video-bg' src="/assets/testimonial-video.mp4" poster=''></video>
+    <div class="overlay"></div>
+    <div class="container wrapper">
+        <div class="text-center mb-50">
+            <h1 class="heading-secondary white-text">What Clients say</h1>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial">
+                <img src="/assets/boy.png" alt="boy" class="testimonial__img" />
+                <h3 class="testimonial__name">Full First Name</h3>
+                <p>Position and Title</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="testimonial">
+                <img src="/assets/boy.png" alt="boy" class="testimonial__img" />
+                <h3 class="testimonial__name">Full First Name</h3>
+                <p>Position and Title</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="testimonial">
+                <img src="/assets/boy.png" alt="boy" class="testimonial__img" />
+                <h3 class="testimonial__name">Full First Name</h3>
+                <p>Position and Title</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    {# end of testimonial #}
+
+
+
+
+    {# ======================= Packages ======================= #}
+    <div class="section-packages" id="packages">
+        <div class="container wrapper">
+            <div class="text-center mb-50">
+                <h2 class='heading-secondary'>Our Packages</h2>
+            </div>
+            <div class="col-1-3">
+                <div class="package fade-in">
+                    <div class="package__head green-gradient">
+                        <h3>Basic</h3>
+                        <h1> <span>GH$</span>1,000</h1>
+                    </div>
+                    <div class="package__text">
+                        <ul class="package-list">
+                            <li> Platforms: 1 (e.g., Facebook, Instagram)</li>
+                            <li> Regular Posts: 12 per platform</li>
+                            <li>  Engagement Monitoring</li>
+                            <li> Monthly Analytics Report</li>
+                            <li>  Basic Content Creation (text-based)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="package fade-in">
+                    <div class="package__head gold-gradient">
+                        <h3>Premium</h3>
+                        <h1> <span>GH$</span>2,000</h1>
+                    </div>
+                    <div class="package__text">
+                        <ul class="package-list">
+                            <li> Platforms: 4 (e.g., Facebook, Instagram)</li>
+                            <li> Regular Posts: 25 per platform</li>
+                            <li>  Engagement Monitoring</li>
+                            <li> Monthly Analytics Report</li>
+                            <li>  Advanced Content Creation (Graphics and visuals)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="package fade-in">
+                    <div class="package__head green-gradient">
+                        <h3>Standard</h3>
+                        <h1> <span>GH$</span>1,500</h1>
+                    </div>
+                    <div class="package__text">
+                        <ul class="package-list">
+                            <li> Platforms: 2 (e.g., Facebook, Instagram)</li>
+                            <li> Regular Posts: 20 per platform</li>
+                            <li>  Engagement Monitoring</li>
+                            <li> Monthly Analytics Report</li>
+                            <li>  Advanced Content Creation (text-based)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
