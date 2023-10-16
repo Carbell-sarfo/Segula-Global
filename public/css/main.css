@@ -191,7 +191,7 @@ section {
 }
 
 .heading-secondary {
-  display: inline;
+  display: inline-block;
   font-size: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -200,6 +200,7 @@ section {
   line-height: 1;
   position: relative;
   z-index: 1;
+  transform: translateX(-3rem);
 }
 .heading-secondary::after {
   content: "";
@@ -1593,10 +1594,11 @@ ul.slick-dots li button {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  outline: 3px solid var(--clr-primary);
   border: 1px solid var(--clr-primary);
-  outline-offset: 1rem;
   margin-bottom: 2rem;
+  position: relative;
+  outline: 3px solid var(--clr-primary);
+  outline-offset: 2rem;
 }
 .team-card .img img {
   height: 110%;
