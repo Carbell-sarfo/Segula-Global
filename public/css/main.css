@@ -1291,6 +1291,10 @@ ul.slick-dots li button {
   margin-bottom: 2rem;
 }
 
+.section-blog {
+  padding: 10rem 0;
+}
+
 .section-faq {
   padding: 8rem 0 12rem;
   border-top: 1px solid #dbdbdb;

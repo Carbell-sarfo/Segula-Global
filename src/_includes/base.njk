@@ -29,6 +29,10 @@
      {# Slick Js Carousel #}
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
+    {# Netlify CMS Authentication #}
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+
 
 
 
@@ -50,6 +54,19 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="/js/slick.js"></script>
+
+    {# REdirect when you login to the ADMIN Page #}
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+                });
+            }
+            });
+        }
+    </script>
     
 </body>
 </html>
