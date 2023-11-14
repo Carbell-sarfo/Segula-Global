@@ -1,0 +1,21 @@
+--- 
+
+title: Recent articles
+meta: Segula Global's mission is to Helping brands own their social media presence by deploying result-driven services around
+layout: 'base.njk'
+
+--- 
+
+
+<div class="section-blog__post" id="hero">
+  <div class="container wrapper mb-50 mt-50">
+    <div class="text-center mb-50">
+        <h1 class="heading-secondary">Recent articles</h1>
+    </div>
+    <div class="blog-container">
+      {%- for post in collections.post | reverse -%}
+        {% include 'article-snippet.njk' %}
+      {%- endfor-%}
+    </div>
+  </div>
+</div>

@@ -271,6 +271,10 @@
         background-color: rgba(var(--clr-green-rgb), .85);
     }
 
+    .banner-container {
+        width: 100%;
+        max-width: 1000px;
+    }
 
     h1 {
         color: var(--clr-gray-light);
@@ -280,7 +284,7 @@
     }
 
     p {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
     
 }
@@ -307,7 +311,7 @@
 
 // ================ Section Value Proposition ===============
 .section-value {
-    Padding: 10rem 0;
+    Padding: 12rem 0;
 
     .value {
         display: grid;
@@ -452,7 +456,7 @@
 
 // =================== Section Packages -=======================
 .section-packages {
-    padding: 15rem 0;
+    padding: 15rem 0 20rem;
 
     .package {
         box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.123);
@@ -503,8 +507,8 @@
                 li {
                     
                     &:not(:last-child) {
-                        margin-bottom: 1rem;
-                        border-bottom: 1px solid var(--clr-primary);
+                        margin-bottom: 2rem;
+                        // border-bottom: 1px solid var(--clr-primary);
                     }
                 }
             }
@@ -513,8 +517,6 @@
     }
 }
 // End of packages
-
-
 
 
 

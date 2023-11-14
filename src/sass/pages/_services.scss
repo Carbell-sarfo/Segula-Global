@@ -6,6 +6,7 @@
 
 .service-page-container {
     padding: 5rem 0 10rem;
+    padding-inline: 10rem;
 }
 .service-card {
     background-color: var(--clr-white);
@@ -253,10 +254,14 @@
 
 
 
+// Desktop and Large Screen
+    @media (min-width: 768px) {
+        .service-card {
+            padding-inline: 2rem;
+        }
+    }
 
-
-
-
+// Tablets and small screen
     @media (max-width: 768px) {
 
     
@@ -282,6 +287,10 @@
             padding: 2rem;
             padding-bottom: 3rem;
             grid-area: at;
+        }
+
+        .service-page-container {
+            padding-inline: 0;
         }
         
     }
