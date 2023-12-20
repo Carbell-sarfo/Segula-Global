@@ -2169,6 +2169,9 @@ ul.slick-dots li button {
 .gift-process {
   padding: 12rem 0;
 }
+.gift-process img {
+  width: 100%;
+}
 
 .gift-package {
   padding: 12rem 0;
@@ -2176,7 +2179,7 @@ ul.slick-dots li button {
 }
 .gift-package .middle {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   text-align: center;
 }
 .gift-package .gift-card {

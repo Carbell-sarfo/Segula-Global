@@ -147,6 +147,10 @@
 // ======================= gift-process =======================
 .gift-process {
     padding: 12rem 0;
+
+    img {
+        width: 100%;
+    }
 }
 
 // End of gift-process
@@ -161,7 +165,7 @@
 
     .middle {
         max-width: 1000px;
-        margin: 0 auto;
+        margin: 0 auto 5rem;
         text-align: center;
     }
 
