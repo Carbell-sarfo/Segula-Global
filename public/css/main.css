@@ -312,6 +312,17 @@ section {
   border: 2px solid var(--clr-primary);
 }
 
+.btn-gold {
+  background-color: var(--clr-gold-light);
+  color: #000;
+  border: 2px solid var(--clr-white);
+}
+.btn-gold:hover, .btn-gold:focus {
+  background-color: var(--clr-white);
+  color: var(--clr-gold-light);
+  border: 2px solid var(--clr-gold-light);
+}
+
 .btn-neutral {
   background-color: var(--clr-white);
   color: #000;
@@ -377,8 +388,8 @@ section {
 
 @media (min-width: 768px) {
   .wrapper {
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 120px;
+    padding-left: 120px;
   }
 
   .col-1-2 {
@@ -1544,7 +1555,7 @@ ul.slick-dots li button {
 
 .team-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 3rem;
 }
@@ -1557,14 +1568,16 @@ ul.slick-dots li button {
   margin-bottom: 5rem;
   padding-top: 4rem;
   border-bottom: 3px solid var(--clr-primary);
+  transition: 0.4s;
 }
 .team-card:hover {
+  transition: 0.4s;
   transform: translateY(-5px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.159);
 }
 .team-card .text {
   padding: 0 3rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 .team-card .text .details {
   width: 100%;
@@ -2046,6 +2059,224 @@ ul.slick-dots li button {
 @media screen and (max-width: 600px) {
   .individual-article__page .main-article__figure::before, .individual-article__page .main-article__figure::after {
     display: none;
+  }
+}
+.gift-hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(/assets/gift-bg.png);
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  position: relative;
+  padding-top: 80px;
+}
+.gift-hero .hero-container {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 7rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+}
+.gift-hero .hero-container .hero-image {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+.gift-hero .hero-container h3 {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  position: relative;
+  animation: fromRight 0.4s ease-in-out forwards;
+}
+.gift-hero .hero-container .hero-name {
+  display: block;
+  font-size: 60px;
+  font-family: "versailles";
+  font-weight: lighter;
+  color: var(--clr-white);
+  letter-spacing: 3px;
+  line-height: 1;
+  margin: 5px 0;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out 0.5s forwards;
+  margin-bottom: 3rem;
+}
+.gift-hero .hero-container .hero-image {
+  padding-top: 60px;
+}
+.gift-hero .hero-container p {
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out 1s forwards;
+}
+.gift-hero .hero-container .btn {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out 1s forwards;
+}
+.gift-hero .hero-container .scroll-down {
+  display: inline-block;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--clr-green);
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.gift-hero .hero-container .scroll-down i {
+  font-size: 3rem;
+}
+.gift-hero .custom-shape-divider-bottom-1703097246 {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.gift-hero .custom-shape-divider-bottom-1703097246 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 130px;
+}
+.gift-hero .custom-shape-divider-bottom-1703097246 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.gift-about {
+  background-color: #fff;
+  padding: 10rem 0;
+}
+.gift-about img {
+  max-width: 300px;
+}
+.gift-about p {
+  font-size: 2rem;
+}
+
+.gift-process {
+  padding: 12rem 0;
+}
+
+.gift-package {
+  padding: 12rem 0;
+  background-color: var(--clr-primary);
+}
+.gift-package .middle {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.gift-package .gift-card {
+  background-color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.gift-package .gift-card .head {
+  border-bottom: 1px solid var(--clr-primary);
+  width: 100%;
+  padding: 0 2rem 2rem;
+  margin-bottom: 3rem;
+}
+.gift-package .gift-card .body .item {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.gift-package .gift-card .body i {
+  color: var(--clr-primary);
+}
+.gift-package .gift-card .body p {
+  display: inline-block;
+}
+.gift-package .gift-card .btn {
+  margin-top: 5rem;
+}
+.gift-package .gift-card.premium {
+  box-shadow: 7px 7px 0px var(--clr-primary-dark);
+}
+
+.gift-offer .col-1-2 {
+  gap: 0;
+}
+.gift-offer .offer {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+.gift-offer .offer:hover {
+  background-size: 150%;
+}
+.gift-offer .offer:hover .btn {
+  transform: scale(1.2);
+}
+.gift-offer .offer:hover .btn-primary {
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
+}
+.gift-offer .offer:hover .btn-gold {
+  background-color: var(--clr-white);
+  color: var(--clr-gold-light);
+  border: 2px solid var(--clr-gold-light);
+}
+.gift-offer .offer p {
+  color: var(--clr-white);
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+.gift-offer .offer.boss-chick {
+  background-image: url(/assets/boss-chick.png);
+}
+.gift-offer .offer.chairman {
+  background-image: url(/assets/chairman.png);
+}
+
+@media screen and (min-width: 769px) {
+  .gift-hero .hero-text {
+    margin-top: -10rem;
+  }
+  .gift-hero .btn-primary {
+    margin-right: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gift-hero .hero-container {
+    grid-template-columns: 1fr;
+  }
+  .gift-hero .hero-container .hero-image {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .gift-hero .hero-container .hero-name {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 325px) {
+  .gift-hero .hero-container .hero-name {
+    font-size: 3rem;
   }
 }
 .no-scroll {
