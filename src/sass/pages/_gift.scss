@@ -127,7 +127,7 @@
 // ======================= gift-about =======================
 .gift-about {
     background-color: #fff;
-    padding: 10rem 0;
+    padding: 10rem 0 15rem;
 
     img {
         max-width: 300px;
@@ -160,7 +160,7 @@
 
 // ======================= gift-packages =======================
 .gift-package {
-    padding: 12rem 0;
+    padding: 12rem 0 15rem;
     background-color: var(--clr-primary);
 
     .middle {
@@ -222,7 +222,7 @@
     .offer {
         width: 100%;
         height: 400px;
-        background-size: cover;
+        background-size: 110%;
         background-position: center;
         display: flex;
         flex-direction: column;
@@ -248,21 +248,111 @@
             border: 2px solid var(--clr-gold-light);
         }
 
-        p {
+        h2 {
             color: var(--clr-white);
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: bold;
-            margin-bottom: 3rem;
+            line-height: 1;
+        }
+        p {
+            margin: 2rem;
+            color: #fff;
         }
 
         &.boss-chick {
             background-image: url(/assets/boss-chick.png);
+            transition: .4s;
         }
         &.chairman {
             background-image: url(/assets/chairman.png);
+            transition: .4s;
+        }
+        &.boss {
+            background-image: url(/assets/boss.png);
+            transition: .4s;
+        }
+        &.corporate-chick {
+            background-image: url(/assets/corporate-chick.png);
+            transition: .4s;
         }
     }
 }
+
+
+
+
+// ===================== Section-why Segula Gift =======================
+.section-gift-why {
+    padding: 15rem 0;
+    width: 100%;
+
+    .why-card {
+        padding: 2rem;
+        transition: .3s;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 3px;
+
+        &:hover::after {
+            left: 0;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: var(--clr-primary);
+            position: absolute;
+            top: 0;
+            left: -99%;
+            transition: .4s;
+            z-index: -1;
+        }
+    }
+}
+// End of Why Segula-Gift
+
+
+
+// =====================  Gift Banner  =======================
+.section-gift-purchase {
+    padding: 15rem 0;
+    width: 100%;
+    position: relative;
+    color: #fff;
+
+
+    .purchase-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        z-index: -1;
+    }
+}
+// End of Gift Banner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

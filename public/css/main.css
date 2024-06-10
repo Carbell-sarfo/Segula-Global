@@ -1555,7 +1555,7 @@ ul.slick-dots li button {
 
 .team-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 3rem;
 }
@@ -2157,7 +2157,7 @@ ul.slick-dots li button {
 
 .gift-about {
   background-color: #fff;
-  padding: 10rem 0;
+  padding: 10rem 0 15rem;
 }
 .gift-about img {
   max-width: 300px;
@@ -2174,7 +2174,7 @@ ul.slick-dots li button {
 }
 
 .gift-package {
-  padding: 12rem 0;
+  padding: 12rem 0 15rem;
   background-color: var(--clr-primary);
 }
 .gift-package .middle {
@@ -2219,7 +2219,7 @@ ul.slick-dots li button {
 .gift-offer .offer {
   width: 100%;
   height: 400px;
-  background-size: cover;
+  background-size: 110%;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -2243,17 +2243,75 @@ ul.slick-dots li button {
   color: var(--clr-gold-light);
   border: 2px solid var(--clr-gold-light);
 }
-.gift-offer .offer p {
+.gift-offer .offer h2 {
   color: var(--clr-white);
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 3rem;
+  line-height: 1;
+}
+.gift-offer .offer p {
+  margin: 2rem;
+  color: #fff;
 }
 .gift-offer .offer.boss-chick {
   background-image: url(/assets/boss-chick.png);
+  transition: 0.4s;
 }
 .gift-offer .offer.chairman {
   background-image: url(/assets/chairman.png);
+  transition: 0.4s;
+}
+.gift-offer .offer.boss {
+  background-image: url(/assets/boss.png);
+  transition: 0.4s;
+}
+.gift-offer .offer.corporate-chick {
+  background-image: url(/assets/corporate-chick.png);
+  transition: 0.4s;
+}
+
+.section-gift-why {
+  padding: 15rem 0;
+  width: 100%;
+}
+.section-gift-why .why-card {
+  padding: 2rem;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.section-gift-why .why-card:hover::after {
+  left: 0;
+}
+.section-gift-why .why-card:hover {
+  color: #fff;
+}
+.section-gift-why .why-card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-primary);
+  position: absolute;
+  top: 0;
+  left: -99%;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.section-gift-purchase {
+  padding: 15rem 0;
+  width: 100%;
+  position: relative;
+  color: #fff;
+}
+.section-gift-purchase .purchase-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
 }
 
 @media screen and (min-width: 769px) {
