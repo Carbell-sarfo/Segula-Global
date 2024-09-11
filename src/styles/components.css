@@ -1,0 +1,20 @@
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: .8rem 1.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border-radius: .5rem;
+    border: 1px solid transparent;
+}
+
+/* yellow button */
+.btn-yellow {
+    background-color: var(--clr-yellow);
+    color: var(--clr-green-dark);
+}
+
+.btn-neutral {
+    background-color: transparent;
+    border-color: #000;
+}

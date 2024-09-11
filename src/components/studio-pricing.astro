@@ -1,0 +1,148 @@
+---
+
+import { Image } from "astro:assets";
+import Price1 from "~/assets/option-1.png";
+import Price2 from "~/assets/option-2.png";
+import Price3 from "~/assets/option-3.png";
+---
+
+
+<section class="studio-pricing">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-primary">Our Prices</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- price-1 -->
+            <div class="price">
+                <!-- image -->
+                <div class="price__image">
+                    <Image src={Price1} alt="Basic Studio Pricing" />
+                </div>
+
+                <div class="price-body">
+
+                    <!-- pricing type -->
+                    <div class="price__type">
+                        <h1>$ 200</h1>
+                        <h3>Premium</h3>
+                    </div>
+    
+                    <!-- details -->
+                    <ul class="price__details">
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- price-2 -->
+            <div class="price">
+                <!-- image -->
+                <div class="price__image">
+                    <Image src={Price2} alt="Basic Studio Pricing" />
+                </div>
+
+                <div class="price-body">
+
+                    <!-- pricing type -->
+                    <div class="price__type">
+                        <h1>$ 200</h1>
+                        <h3>Premium</h3>
+                    </div>
+    
+                    <!-- details -->
+                    <ul class="price__details">
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- price-3 -->
+            <div class="price">
+                <!-- image -->
+                <div class="price__image">
+                    <Image src={Price3} alt="Basic Studio Pricing" />
+                </div>
+
+                <div class="price-body">
+
+                    <!-- pricing type -->
+                    <div class="price__type">
+                        <h1>$ 200</h1>
+                        <h3>Premium</h3>
+                    </div>
+    
+                    <!-- details -->
+                    <ul class="price__details">
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="#" class="btn btn-yellow">Book a call</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<style lang="scss">
+    .studio-pricing {
+        background-color: #90D0C2;
+        padding: 8rem 0;
+    }
+
+    .price {
+        background-color: var(--clr-white);
+        text-align: center;
+        border-radius: 2rem;
+        overflow: hidden;
+
+        .price-body {
+            padding: 1rem 2rem 2rem;
+        }
+
+        &__type {
+            border-bottom: 1px solid var(--clr-green);
+            padding: 1rem 2rem;
+
+            h1 {
+                font-size: 2rem;
+                font-weight: bold;
+                line-height: 1.2;
+            }
+            h3 {
+                color: var(--clr-green);
+            }
+        }
+
+        &__details {
+            
+            li {
+                margin: 1rem 0;
+            }
+        }
+    }
+</style>

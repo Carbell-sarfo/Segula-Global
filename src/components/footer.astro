@@ -5,45 +5,145 @@ import type { FooterLink } from "~/types";
 
 const links: Array<FooterLink> = [
   {
-    url: "https://astro.build/",
-    description: "Astro's official website",
-    icon: "mdi:home",
+    url: "https://www.youtube.com/@segulaglobal",
+    description: "Grow you influence with YouTube",
+    icon: "fa-brands fa-youtube",
   },
   {
-    url: "https://github.com/mhyfritz/astro-landing-page",
-    description: "View source on GitHub",
-    icon: "fa-brands:github-alt",
+    url: "https://www.instagram.com/segulaglobal/",
+    description: "Impact your connections on LinkedIn",
+    icon: "fa-brands fa-linkedin-in",
   },
   {
     url: "https://astro.build/chat",
-    description: "Astro on Discord",
-    icon: "fa-brands:discord",
-  },
-  {
-    url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
-    icon: "fa-brands:twitter",
+    description: "Follow us on Instagram",
+    icon: "fa-brands fa-instagram",
   },
 ];
 ---
 
-<footer class="relative flex h-64 items-center justify-center">
-  <div class="absolute inset-0 overflow-hidden opacity-40">
-    <HeroImage />
+<footer class="pt-24 section-footer">
+  <div class="container wrapper">
+
+    <!-- Quote -->
+    <div class="quote text-center max-w-4xl mx-auto">
+      <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a totam eius temporibus? Aspernatur soluta expedita fugiat. Incidunt, voluptas culpa iure id eaque aut amet optio repudiandae eum, dolor quis!</p>
+
+      <h3 class="quote-title yellow-text italic">Author title</h3>
+    </div>
+
+    <!-- Social media icons -->
+    <ul class="social-list flex items-center justify-center gap-4 py-16 pt-20">
+      {
+        links.map((link) => (
+          <li class="social-item">
+            <a class="social-link" href={link.url} >
+              {/* <span class="sr-only">{link.description}</span> */}
+              <i class={link.icon}></i>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+
+    <p class="copy text-center text-slate-300 text-sm pb-4">© 2023 Segula Global. All Rights Reserved.</p>
   </div>
-  <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-4">
-    {
-      links.map((link) => (
-        <li>
-          <a
-            class="flex size-16 items-center justify-center rounded-full border-2 border-current p-4"
-            href={link.url}
-          >
-            <span class="sr-only">{link.description}</span>
-            <Icon class="size-full" name={link.icon} />
-          </a>
-        </li>
-      ))
-    }
-  </ul>
 </footer>
+
+
+
+
+
+
+
+
+
+
+
+<style lang="scss">
+
+// section footer
+.section-footer {
+  background-color: var(--clr-green-dark);
+  color: #D9D9D9;
+}
+
+
+.social-list {
+
+  .social-item {
+
+    &:nth-child(1) .social-link {
+      color: red;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::after {
+        background-color: red;
+      }
+    }
+    &:nth-child(2) .social-link {
+      color: #0077B5;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::after {
+        background-color: #0077B5;
+      }
+    }
+    &:nth-child(3) .social-link {
+      color: #D62976;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::after {
+        background-image: linear-gradient(to bottom, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+      }
+    }
+  }
+
+  .social-link {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .2s;
+
+    &:hover, &:focus {
+      color: #fff;
+      scale: .9;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      top: 0;
+    }
+
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: green;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: .2s;
+      z-index: -1;
+    }
+  }
+}
+</style>

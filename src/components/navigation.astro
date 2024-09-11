@@ -4,21 +4,22 @@ import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
-  { title: "Showcase", url: "#showcase" },
+  { title: "Home", url: "/"},
+  { title: "The Studio", url: "studio"},
+  { title: "Segula Tech", url: "tech" },
+  { title: "Contact Us", url: "contact" },
 ];
 ---
 
-<header
-  id="page-header"
-  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
->
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
+<header id="page-header" class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white">
+  <!-- Logo -->
+  <a class="flex items-center gap-3 hover:!text-default" href="/">
     <h1 class="sr-only">Astro</h1>
     <Icon name="logomark" class="size-10" />
     <Icon name="wordmark" class="hidden h-4 sm:block" />
   </a>
+
+
   <div>
     <div class="flex items-center gap-6">
       <nav class="hidden sm:block">
@@ -34,16 +35,12 @@ const navItems: Array<NavItem> = [
           }
         </ul>
       </nav>
-      <button
-        id="open-nav-button"
-        type="button"
-        class="btn sm:hidden"
-        aria-label="Navigation"
-      >
+      <button id="open-nav-button" type="button" class="nav-btn sm:hidden" aria-label="Navigation">
         <Icon name="mdi:menu" class="size-8" />
       </button>
-      <ThemeSwitcher />
+      <!-- <ThemeSwitcher /> -->
     </div>
+
     <div id="menu-modal" class="modal hidden" aria-hidden="true">
       <div class="fixed inset-0 bg-default px-8 py-4 text-default">
         <div class="space-y-4" role="dialog" aria-modal="true">
@@ -51,7 +48,7 @@ const navItems: Array<NavItem> = [
             <button
               id="close-nav-button"
               type="button"
-              class="btn"
+              class="nav-btn"
               aria-label="Close navigation"
             >
               <Icon name="mdi:close" class="size-8" />
@@ -79,6 +76,14 @@ const navItems: Array<NavItem> = [
   </div>
 </header>
 
+
+
+
+
+
+
+
+<!-- ============= JS =============== -->
 <script>
   import MicroModal from "micromodal";
   import invariant from "tiny-invariant";
@@ -127,10 +132,27 @@ const navItems: Array<NavItem> = [
   </style>
 </noscript>
 
-<style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================== CSS ================= -->
+<style lang="scss">
   .fixed-header {
     @apply fixed bottom-auto top-0;
-    @apply border-default bg-default text-default;
+    // @apply border-default bg-default text-default;
+    color: #fff;
+    background-color: #008764;
+    transition: .2s;
   }
   .modal.is-open {
     @apply block;
