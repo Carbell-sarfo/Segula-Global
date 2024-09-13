@@ -9,6 +9,7 @@ import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
 import MainLayout from "~/layouts/MainLayout.astro";
+import LinkedinBanner from "~/components/linkedin-banner.astro";
 import { Image } from "astro:assets";
 
 import About1 from "~/assets/about-studio.png";
@@ -142,15 +143,73 @@ import Service3 from "~/assets/linkedin-profile.png";
 
 
   
-  
-  
-  <!-- Our process -->
-  <section class="section-process">
-    <div class="container wrap">
-      <h2 class="heading-primary">Our Process</h2>
+  <!-- {# ========================= Section-Process =================== #} -->
+<section class="section-process">
+    <div class="container wrapper">
+        <div class="text-center mb-50 mt-50">
+            <h1 class="heading-primary">Our Process</h1>
+        </div>
 
+<!-- {# =================== Timeline cards for process ============== #} -->
+        <div class="timeline-main">
+            <div class="timeline-wrap">
+                <div class="timeline-card">
+                    <div class="timeline-card-wrap">
+                        <div class="card-head-wrap">
+                        <h2 class="timeline-card-head">Start with a Conversation</h2>
+                        <h6 class="timeline-card-subhead">1st Step</h6>
+                        </div>
+                        <p class="timeline-card-text">
+                        Begin by talking with us. We understand that your schedule is demanding, so we start with an initial conversation to learn about your brand, goals, and vision. </p>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-wrap">
+                        <div class="card-head-wrap">
+                        <h2 class="timeline-card-head">Brand Assessment</h2>
+                        <h6 class="timeline-card-subhead">Step 2</h6>
+                        </div>
+                        <p class="timeline-card-text">We take the reins on brand assessment. Our expert team conducts a comprehensive evaluation to identify opportunities and areas for improvement.</p>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-wrap">
+                        <div class="card-head-wrap">
+                        <h2 class="timeline-card-head">Package Selection and Strategy Design</h2>
+                        <h6 class="timeline-card-subhead">Step 3</h6>
+                        </div>
+                        <p class="timeline-card-text">
+                        Select a package that aligns with your needs and goals. From there, we design a personalized brand strategy that reflects your unique identity and objectives. </p>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-wrap">
+                        <div class="card-head-wrap">
+                        <h2 class="timeline-card-head"> Implementation, Monitoring, and Evaluation</h2>
+                        <h6 class="timeline-card-subhead">Step 4</h6>
+                        </div>
+                        <p class="timeline-card-text">As always, let us handle the heavy lifting. We take care of the implementation, monitor progress, and continuously evaluate the strategy's effectiveness. You can trust us to manage the process while you focus on your core responsibilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container wrapper">
+            <!-- {# call to action text #} -->
+            <p style="margin: 4rem auto; width: 100%; max-width: 1000px; text-align: center;">This process embodies the essence of Segula Global's commitment to building your brand while you remain focused on your primary role. We understand that you're too busy to navigate this journey alone, and that's why we're here to empower you with a comprehensive and hands-on approach to brand development.</p>
+
+            <!-- {# call to action #} -->
+            <div class="text-center mb-50 mt-50">
+                <a href="#" class="btn btn-yellow">Schedule a Call</a>
+            </div>
     </div>
-  </section>
+    </div>
+</section>
+<!-- {# End of process section #} -->
+
+
+
+  <LinkedinBanner />
+
   <Footer />
 </MainLayout>
 
@@ -271,6 +330,21 @@ import Service3 from "~/assets/linkedin-profile.png";
     position: relative;
     z-index: 1;
     color: #fff;
+    transition: .2s;
+
+    &:hover,
+    &:focus {
+      transform: scale(.98)
+    }
+
+    &:hover .service-plus, 
+    &:focus .service-plus {
+      color: var(--clr-yellow);
+        background-color: var(--clr-green-dark);
+        border: 1px solid var(--clr-yellow);
+        transform: translateX(-50%) rotateZ(45deg)
+    }
+
 
     &-plus {
       display: flex;
@@ -285,7 +359,7 @@ import Service3 from "~/assets/linkedin-profile.png";
       top: -1.5rem;
       left: 50%;
       transform: translateX(-50%);
-      transition: .2s;
+      transition: .4s;
       border: 1px solid transparent;
 
       &:hover, &:focus {
@@ -302,4 +376,224 @@ import Service3 from "~/assets/linkedin-profile.png";
       left: 0;
     }
   }
+
+
+
+  // Our Process
+  
+
+// ============== How we work ==============
+.section-process {
+    padding: 10rem 0;
+}
+
+.timeline-main {
+        width: 100%;
+        padding: 25px;
+        
+        .timeline-wrap {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 4px;
+                height: calc(100% - 10px);
+                background-color: var(--clr-green);
+                animation: line 5s linear;
+                
+                @media (max-width: 767px) {
+                    left: 95%;
+                }
+            }
+            
+            .timeline-card {
+                width: 50%;
+        margin-right: auto;
+        position: relative;
+        @media (max-width: 767px) {
+            width: 95%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background: var(--clr-yellow);
+            animation: fadeIn 1.5s;
+            animation-fill-mode: both;
+        }
+
+
+        .timeline-card-wrap {
+            height: 100%;
+            margin-right: 35px;
+            background-color: var(--clr-green);
+            border-radius: 10px;position: relative;
+            padding: 30px;
+            animation: fadeInRight 2.5s;
+            animation-fill-mode: both;
+
+            @media (max-width: 767px) {
+                padding: 20px;
+            }
+
+
+            &::before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: -8px;
+            height: 8px;
+            width: calc(100% - 60px);
+            background-color: var(--clr-green-dark);
+            border-radius: 5px 5px 0 0;
+            opacity: 0.3;
+            }
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 10px;
+                right: -8px;
+                width: 20px;
+                height: 20px;
+                background-color: var(--clr-green);
+                border-radius: 5px;
+                transform: rotate(45deg);
+            }
+
+
+            .card-head-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                @media (max-width: 1199px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                }
+
+
+            .timeline-card-head {
+                font-size: 28px;
+                line-height: 38px;
+                font-weight: 500;
+                color: #fff;
+                margin-bottom: 0;
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+
+
+                .timeline-card-subhead {
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 400;
+                color: #bdbdbd;
+                margin-bottom: 0;
+                font-style: italic;
+                @media (max-width: 767px) {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                }
+            }
+
+            .timeline-card-text {
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 400;
+                color: var(--clr-white);
+                margin: 25px 0 0;
+                @media (max-width: 767px) {
+                font-size: 12px;
+                line-height: 22px;
+                }
+            }
+        }
+
+            &:nth-child(even) {
+            @media (min-width: 768px) {
+                margin-left: auto;
+                margin-right: 0;
+                &::after {
+                right: unset;
+                left: -10px;
+                animation-delay: 2.6s;
+                }
+                .timeline-card-wrap {
+                margin-right: 0;
+                margin-left: 35px;
+                animation: fadeInLeft 2.5s;
+                animation-fill-mode: both;
+                animation-delay: 2.5s;
+                &::after {
+                    right: unset;
+                    border-left: none;
+                    left: -8px;
+                    border-right: 10px solid var(--clr-green);
+                }
+                }
+            }
+            }
+        }
+        }
+    }
+
+    @keyframes line {
+        0% {
+        height: 0;
+        }
+    
+        100% {
+        height: calc(100% - 10px);
+        }
+    }
+    @keyframes fadeIn {
+        from {
+        opacity: 0;
+        }
+    
+        to {
+        opacity: 1;
+        }
+    }
+    @keyframes fadeInRight {
+        0% {
+        opacity: 0;
+        transform: translateX(20px);
+        }
+        100% {
+        opacity: 1;
+        transform: translateX(0);
+        }
+    }
+    @keyframes fadeInLeft {
+        0% {
+        opacity: 0;
+        transform: translateX(-20px);
+        }
+        100% {
+        opacity: 1;
+        transform: translateX(0);
+        }
+    }
+
+
 </style>
