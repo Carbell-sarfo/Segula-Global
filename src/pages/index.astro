@@ -8,68 +8,298 @@ import Intro from "~/components/intro.astro";
 import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
+import MainLayout from "~/layouts/MainLayout.astro";
+import { Image } from "astro:assets";
 
-const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
-const description =
-  "Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
+import About1 from "~/assets/about-studio.png";
+import Service1 from "~/assets/headshot.png";
+import Service2 from "~/assets/podcast.png";
+import Service3 from "~/assets/linkedin-profile.png";
 ---
 
-<!doctype html>
-<!-- <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark"> -->
-<html lang="en" class="h-full motion-safe:scroll-smooth">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta name="generator" content={generator} />
+<MainLayout title="Segula Global | Home" description="Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.">
 
-    <title>Astro Landing Page</title>
-    <meta name="description" content={description} />
+  <!-- navigation -->
+  <Navigation />
 
-    <!-- social media -->
-    <meta property="og:title" content="Astro" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-    <meta property="og:url" content={site} />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- initialize theme -->
-    <script is:inline>
-      // const themeSaved = localStorage.getItem("theme");
-
-      // if (themeSaved) {
-      //   document.documentElement.dataset.theme = themeSaved;
-      // } else {
-      //   const prefersDark = window.matchMedia(
-      //     "(prefers-color-scheme: dark)",
-      //   ).matches;
-      //   document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
-      // }
-
-      // window
-      //   .matchMedia("(prefers-color-scheme: dark)")
-      //   .addEventListener("change", (event) => {
-      //     if (!localStorage.getItem("theme")) {
-      //       document.documentElement.dataset.theme = event.matches
-      //         ? "dark"
-      //         : "light";
-      //     }
-      //   });
-    </script>
-  </head>
-  <body
-    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
-  >
-    <Navigation />
-    <Splash />
-    <div class="space-y-24 px-8 py-32">
-      <Intro />
-      <Features />
-      <Compatibility />
-      <Showcase />
+  <!-- Hero section -->
+  <section class="section-hero">
+    <div class="container wrapper w-full h-full">
+      <div class="hero-text">
+        <h1 class="text-8xl md:text-8xl font-extrabold">Impact the world</h1>
+        <h3 class="yellow-text text-2xl md:text-2xl font-bold my-8">One audience at a time</h3>
+        <a href="#" class="btn btn-neutral__white">Lorem Ipsum</a>
+      </div>
     </div>
-    <Footer />
-  </body>
-</html>
+  </section>
+
+
+  <!-- About us -->
+  <section class="section-about">
+    <div class="container wrapper">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+        <div>
+          <Image src={About1} alt="About Segula Global Image" />
+        </div>
+        <div>
+          <h2 class="mb-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem fuga magni excepturi dignissimos nostrum obcaecati doloremque maxime dolorum delectus et!</h2>
+          <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem doloribus fugiat ex aut assumenda ullam consequuntur cumque et esse labore.</p>
+          <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum modi neque dolorum nemo aliquid amet, dicta delectus ratione perferendis unde earum, assumenda ipsam consequuntur sint.</p>
+        </div>
+      </div>
+
+      <!-- mission and vision -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="mission left">
+          <h2 class="text-4xl md:text-4xl font-extrabold mb-4">Our Mission</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ipsam obcaecati quam, rem minus magnam unde nemo assumenda id laboriosam! Magni saepe reiciendis corporis incidunt.</p>
+        </div>
+        <div class="mission right">
+          <h2 class="text-4xl md:text-4xl font-extrabold mb-4">Our Vision</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus blanditiis modi dignissimos consequuntur vel minima delectus incidunt esse illum! Excepturi quam beatae laborum itaque dolore, praesentium debitis quae minima doloribus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- What we do -->
+  <section class="section-service relative">
+    <div class="container wrapper">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="heading-primary">What We Do</h1>
+        <p class=" mb-24">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit omnis facilis quod consequatur. Amet optio itaque rerum eius incidunt necessitatibus, error reiciendis nostrum voluptatem aspernatur ipsam doloribus odio autem quas!</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section-items">
+    <div class="container wrapper">
+      <!-- Services -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 -mt-60">
+        <!-- Headshot -->
+        <div class="service">
+          <a href="#" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={Service1} alt="Headshot" class="service-img" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Lorem ipsum dolor sit.</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae dicta corporis.</p>
+            <a href="#" class="btn-thin">Learn More</a>
+          </div>
+    
+        </div>
+        <!-- Podcast -->
+        <div class="service">
+          <a href="#" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={Service2} alt="Headshot" class="service-img" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Lorem ipsum dolor sit.</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae dicta corporis.</p>
+            <a href="#" class="btn-thin">Learn More</a>
+          </div>
+    
+        </div>
+        <!-- LinkedIn Profile -->
+        <div class="service">
+          <a href="#" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={Service3} alt="Headshot" class="LinkedIn Profile Optimisation" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Lorem ipsum dolor sit.</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae dicta corporis.</p>
+            <a href="#" class="btn-thin">Learn More</a>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  
+  
+  
+  <!-- Our process -->
+  <section class="section-process">
+    <div class="container wrap">
+      <h2 class="heading-primary">Our Process</h2>
+
+    </div>
+  </section>
+  <Footer />
+</MainLayout>
+
+
+
+
+
+
+
+<script is:inline>
+  // const themeSaved = localStorage.getItem("theme");
+
+  // if (themeSaved) {
+  //   document.documentElement.dataset.theme = themeSaved;
+  // } else {
+  //   const prefersDark = window.matchMedia(
+  //     "(prefers-color-scheme: dark)",
+  //   ).matches;
+  //   document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+  // }
+
+  // window
+  //   .matchMedia("(prefers-color-scheme: dark)")
+  //   .addEventListener("change", (event) => {
+  //     if (!localStorage.getItem("theme")) {
+  //       document.documentElement.dataset.theme = event.matches
+  //         ? "dark"
+  //         : "light";
+  //     }
+  //   });
+</script>
+
+
+
+
+<style lang="scss">
+  .section-hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(/home-bg.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    .hero-text {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+
+
+  // Secction About
+  .section-about {
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    padding: 8rem 0;
+  }
+
+  .mission {
+    background-color: var(--clr-yellow);
+    color: var(--clr-green-dark);
+    padding: 2rem;
+    padding-bottom: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+
+    &.right {
+
+      &::after {
+
+        left: -2.5rem;
+      }
+    }
+    &.left {
+
+      &::after {
+
+        right: -2.5rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: var(--clr-green);
+      position: absolute;
+      bottom: -2.5rem;
+      // right: 0;
+    }
+  }
+
+
+
+
+
+  // Section services, what we do
+  .section-service {
+    padding-top: 8rem;
+    padding-bottom: 15rem;
+    background-color: var(--clr-green-dark);
+    color: var(--clr-white);
+    width: 100%;
+  }
+  .service {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+
+    &-plus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-green-dark);
+      background-color: var(--clr-yellow);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: .2s;
+      border: 1px solid transparent;
+
+      &:hover, &:focus {
+        color: var(--clr-yellow);
+        background-color: var(--clr-green-dark);
+        border: 1px solid var(--clr-yellow);
+        transform: translateX(-50%) rotateZ(45deg)
+      }
+    }
+
+    &-img {
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+</style>
