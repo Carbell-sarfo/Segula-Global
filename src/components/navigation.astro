@@ -106,11 +106,19 @@ const navItems: Array<NavItem> = [
   invariant(closeNavButton, "closeNavButton should not be null");
 
   const openMenu = () => {
+    // Open the modal with MicroModal and add the 'show' class for the transition
     MicroModal.show(menuModalId, { disableScroll: true });
+    document.getElementById(menuModalId).classList.add('show');
   };
 
   const closeMenu = () => {
-    MicroModal.close(menuModalId);
+    // Remove the 'show' class to trigger the transition
+    document.getElementById(menuModalId).classList.remove('show');
+
+    // Add a delay to ensure the transition finishes before closing the modal
+    setTimeout(() => {
+      MicroModal.close(menuModalId);
+    }, 300); // Matches the duration of the CSS transition
   };
 
   openNavButton.addEventListener("click", openMenu);
@@ -126,6 +134,7 @@ const navItems: Array<NavItem> = [
       closeMenu();
     }
   });
+
 </script>
 
 
@@ -135,8 +144,10 @@ const navItems: Array<NavItem> = [
 <noscript>
   <style>
     #open-nav-button {
-      display: none;
+      /* display: none; */
+      opacity: 0;
     }
+    
   </style>
 </noscript>
 
@@ -190,7 +201,6 @@ const navItems: Array<NavItem> = [
     backdrop-filter: blur(10px);
     transition: .4s;
   }
-
   .nav-link {
     display: inline-block;
     padding: 1rem 2.5rem;
