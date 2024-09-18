@@ -6,12 +6,43 @@
     font-family: inherit;
     border-radius: .5rem;
     border: 1px solid transparent;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .2s;
+}
+.btn:hover {
+    transform: scale(.98);
+}
+.btn:hover::after {
+    opacity: 1;
+    transform: scale(2, 1.5);
+}
+.btn::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* opacity: 0; */
+    transition: .4s;
+    border-radius: 50%;
+    transform: scale(0, 0);
 }
 
 /* yellow button */
 .btn-yellow {
     background-color: var(--clr-yellow);
     color: var(--clr-green-dark);
+}
+.btn-yellow:hover,
+.btn-yellow:focus {
+    color: var(--clr-yellow);
+}
+.btn-yellow::after {
+    background-color: var(--clr-green-dark);
 }
 
 .btn-neutral {
@@ -21,4 +52,10 @@
 .btn-neutral__white {
     background-color: transparent;
     border-color: #fff;
+}
+.btn-neutral__white:hover {
+    color: #000;
+}
+.btn-neutral__white::after {
+    background-color: #fff;
 }
