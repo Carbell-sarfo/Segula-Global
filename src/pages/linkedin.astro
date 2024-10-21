@@ -1,6 +1,8 @@
 ---
 import Navigation from "~/components/navigation.astro";
 import MainLayout from "~/layouts/MainLayout.astro";
+import LinkedinBanner from "~/components/linkedin-banner.astro";
+import Footer from "~/components/footer.astro";
 
 
 ---
@@ -10,5 +12,193 @@ import MainLayout from "~/layouts/MainLayout.astro";
     <Navigation />
 
 
+    <!-- Section hero -->
+    <!-- Hero section -->
+    <section class="section-hero">
+        <div class="container wrapper w-full h-full">
+        <div class="hero-text">
+            <h1 class="text-8xl md:text-8xl font-extrabold">Branding for you</h1>
+            <h3 class="yellow-text text-2xl md:text-2xl font-bold my-8">One audience at a time</h3>
+            <a href="#" class="btn btn-neutral__white">Lorem Ipsum</a>
+        </div>
+        </div>
+    </section>
+    <!-- End of section hero -->
+
+    
+    <!-- section Linkedin offers -->
+    <section class="section-offers py-32">
+    <div class="container wrapper">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="offer">
+                <h3>Build my team or company on Linkedin</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam earum quaerat, perspiciatis ratione, fugit sit inventore ex perferendis eaque excepturi quod vel deserunt debitis accusamus.</p>
+                <a href="/studio" class="btn-thin">Learn More</a>
+            </div>
+            <div class="offer second">
+                <h3>Build my team or company on Linkedin</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam earum quaerat, perspiciatis ratione, fugit sit inventore ex perferendis eaque excepturi quod vel deserunt debitis accusamus.</p>
+                <a href="/studio" class="btn-thin">Learn More</a>
+            </div>
+            <div class="offer">
+                <h3>Build my team or company on Linkedin</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam earum quaerat, perspiciatis ratione, fugit sit inventore ex perferendis eaque excepturi quod vel deserunt debitis accusamus.</p>
+                <a href="/studio" class="btn-thin">Learn More</a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- The process -->
+    <div class="section-process">
+        <div class="container wrapper">
+            <div class="text-center">
+                <h2 class="heading-primary">processs</h2>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div data-ui-tablist class="ui-accordion" data-ui-transition="collapse">
+                    <!-- process-1 -->
+                    <div class="ui-accordion-item">
+                        <button data-ui-tablist-tab class="ui-accordion-header">Planning</button>
+                        <div data-ui-tablist-tabpanel>
+                            <div class="ui-accordion-body"> In your planning sessions, your project manager will work closely with you to organize, schedule, and execute your team’s headshots.
+                            <ul class="list-disc ml-12">
+                                <li>Develop a style</li>
+                                <li>Map out locations</li>
+                                <li>Source photographers</li>
+                                <li>Schedule photoshoots</li>
+                                <li>Manage the timeline</li>
+                            </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- process-2 -->
+                    <div class="ui-accordion-item">
+                        <button data-ui-tablist-tab class="ui-accordion-header">The shoot</button>
+                        <div data-ui-tablist-tabpanel hidden>
+                            <div class="ui-accordion-body">Images are tethered into a computer on-site where clients will be to able to approve of the images in real-time.Your team will be able to approve onsite.</div>
+                        </div>
+                    </div>
+
+                    <!-- process-3 -->
+                    <div class="ui-accordion-item">
+                        <button data-ui-tablist-tab class="ui-accordion-header">Approve shots</button>
+                        <div data-ui-tablist-tabpanel hidden>
+                            <div class="ui-accordion-body">Images can be approved in real time during the session. Alternatively, after the session, Headshot Booker can provide a proofing gallery with all of the best images from the shoot for selection. Whichever works best for you.</div>
+                        </div>
+                    </div>
+
+                    <!-- process-4 -->
+                    <div class="ui-accordion-item">
+                        <button data-ui-tablist-tab class="ui-accordion-header">Delivery</button>
+                        <div data-ui-tablist-tabpanel hidden>
+                            <div class="ui-accordion-body">Images are delivered to you as high-resolution JPEG files with all pre-agreed-upon usage rights.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <LinkedinBanner />
+
+    <Footer />
+
+
 
 </MainLayout>
+
+
+
+
+
+
+
+<style lang="scss">
+
+
+.section-hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(/linkedin-bg.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    .hero-text {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+
+
+
+
+
+.section-offers {
+    background-color: var(--clr-green);
+    color: #fff;
+
+    .offer {
+        padding: 1rem;
+
+        h3 {
+            font-weight: bold;
+            font-size: 1.6rem;
+            line-height: 1.4;
+            margin-bottom: 1rem
+        }
+    }
+
+    .offer.second {
+        border-inline: 1px solid #90D0C2;
+    }
+}
+@media screen and (max-width: 767px) {
+    .section-offers .offer.second {
+        border-inline: none;
+
+    }
+}
+
+
+
+
+//  Section Process
+.section-process {
+    background-color: #90D0C2;
+    padding: 8rem 0;
+}
+
+.ui-accordion-header {
+    border-bottom: 1px solid #4a4a4a;
+    margin-bottom: 2rem;
+    background-color: var(--clr-green-dark);
+    color: #90D0C2;
+
+    &:hover {
+        color: var(--clr-yellow);
+    }
+}
+.ui-accordion-header:where(.ui-active) {
+    color: yellow;
+}
+.ui-accordion-body {
+    background-color: var(--clr-green-dark);
+    color: #fff;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+}
+</style>
