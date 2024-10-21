@@ -1,0 +1,171 @@
+---
+import Navigation from "~/components/navigation.astro"
+import MainLayout from "~/layouts/MainLayout.astro"
+import LinkedinBanner from "~/components/linkedin-banner.astro";
+import Footer from "~/components/footer.astro";
+
+import { Image } from "astro:assets";
+
+import Headshot1 from "../assets/headshot-1.png"
+import Headshot2 from "../assets/headshot-2.png"
+import Headshot3 from "../assets/headshot-3.png"
+import Headshot4 from "../assets/headshot-4.png"
+import Headshot5 from "../assets/headshot-5.png"
+import Headshot6 from "../assets/headshot-6.png"
+---
+
+
+
+
+<MainLayout title="Headshot Session | Segula Global">
+<Navigation />
+
+<!-- Hero section -->
+<section class="section-hero">
+    <div class="container wrapper w-full h-full">
+      <div class="hero-text">
+        <h1 class="text-8xl md:text-8xl font-extrabold">Come alive</h1>
+        <h3 class="yellow-text text-2xl md:text-2xl font-bold my-8">One audience at a time</h3>
+        <a href="#" class="btn btn-neutral__white">Lorem Ipsum</a>
+      </div>
+    </div>
+  </section>
+<!-- End of section hero -->
+
+
+
+
+<!-- Section Headshot gallery -->
+<section class="section-gallery py-36">
+    <div class="container wrapper">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Image src={Headshot1} alt="Headshot photo of Sheila Wristberg" />
+            <Image src={Headshot2} alt="Headshot photo of Elizabeth Seddy" />
+            <Image src={Headshot3} alt="Headshot photo of Kamal deen Alhassan" />
+            <Image src={Headshot4} alt="Headshot photo of Daniel Sarkodie" />
+            <Image src={Headshot5} alt="Headshot photo of Francis" />
+            <Image src={Headshot6} alt="Headshot photo of Esther Timinca" />
+        </div>
+    </div>
+</section>
+<!-- End of section gallery -->
+
+
+<!-- The process -->
+<div class="section-process">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-primary">processs</h2>
+        </div>
+        <div class="max-w-4xl mx-auto">
+            <div data-ui-tablist class="ui-accordion" data-ui-transition="collapse">
+                <!-- process-1 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Planning</button>
+                    <div data-ui-tablist-tabpanel>
+                        <div class="ui-accordion-body"> In your planning sessions, your project manager will work closely with you to organize, schedule, and execute your team’s headshots.
+                        <ul class="list-disc ml-12">
+                            <li>Develop a style</li>
+                            <li>Map out locations</li>
+                            <li>Source photographers</li>
+                            <li>Schedule photoshoots</li>
+                            <li>Manage the timeline</li>
+                        </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- process-2 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">The shoot</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Images are tethered into a computer on-site where clients will be to able to approve of the images in real-time.Your team will be able to approve onsite.</div>
+                    </div>
+                </div>
+
+                <!-- process-3 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Approve shots</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Images can be approved in real time during the session. Alternatively, after the session, Headshot Booker can provide a proofing gallery with all of the best images from the shoot for selection. Whichever works best for you.</div>
+                    </div>
+                </div>
+
+                <!-- process-4 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Delivery</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Images are delivered to you as high-resolution JPEG files with all pre-agreed-upon usage rights.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End of the process -->
+
+
+<LinkedinBanner />
+
+<Footer />
+
+</MainLayout>
+
+
+
+
+<style lang="scss">
+
+
+.section-hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(/headshot-bg.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    .hero-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+  }
+
+
+
+
+//  Section Process
+.section-process {
+    background-color: #90D0C2;
+    padding: 8rem 0;
+}
+
+.ui-accordion-header {
+    border-bottom: 1px solid #4a4a4a;
+    margin-bottom: 2rem;
+    background-color: var(--clr-green-dark);
+    color: #90D0C2;
+
+    &:hover {
+        color: var(--clr-yellow);
+    }
+}
+.ui-accordion-header:where(.ui-active) {
+    color: yellow;
+}
+.ui-accordion-body {
+    background-color: var(--clr-green-dark);
+    color: #fff;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+}
+</style>

@@ -5,6 +5,7 @@ import StudioBanner from "~/components/studio-banner.astro";
 import MainLayout from "~/layouts/MainLayout.astro";
 
 import ContactImg from "~/assets/contact-img.png"
+import Navigation2 from "~/components/navigation-2.astro";
 ---
 
 
@@ -12,6 +13,9 @@ import ContactImg from "~/assets/contact-img.png"
 
 
 <MainLayout title="Contact Us | Segula Global">
+    <!-- Second Navigation -->
+    <Navigation2 />
+
     <!-- hero section -->
     <section class="contact-hero">
         <div class="container wrapper">
@@ -175,7 +179,6 @@ import ContactImg from "~/assets/contact-img.png"
             position: relative;
             padding: 2rem 1rem;
             color: #fff;
-            background-color: red;
 
             img {
                 position: absolute;

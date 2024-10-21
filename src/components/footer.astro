@@ -10,12 +10,12 @@ const links: Array<FooterLink> = [
     icon: "fa-brands fa-youtube",
   },
   {
-    url: "https://www.instagram.com/segulaglobal/",
+    url: "https://www.linkedin.com/company/100048598/admin/dashboard/",
     description: "Impact your connections on LinkedIn",
     icon: "fa-brands fa-linkedin-in",
   },
   {
-    url: "https://astro.build/chat",
+    url: "https://www.instagram.com/segulaglobal/",
     description: "Follow us on Instagram",
     icon: "fa-brands fa-instagram",
   },
@@ -37,7 +37,7 @@ const links: Array<FooterLink> = [
       {
         links.map((link) => (
           <li class="social-item">
-            <a class="social-link" href={link.url} >
+            <a class="social-link" href={link.url} target="_blank" >
               {/* <span class="sr-only">{link.description}</span> */}
               <i class={link.icon}></i>
             </a>

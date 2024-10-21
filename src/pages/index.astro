@@ -83,55 +83,56 @@ import Service3 from "~/assets/linkedin-profile.png";
       <div class="grid grid-cols-1 md:grid-cols-3 gap-16 -mt-60">
         <!-- Headshot -->
         <div class="service">
-          <a href="#" class="service-plus">
+          <a href="/headshot" class="service-plus">
             <i class="fa-solid fa-plus"></i>
           </a>
     
           <Image src={Service1} alt="Headshot" class="service-img" />
     
           <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
-            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Lorem ipsum dolor sit.</p>
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Professional Headshots</p>
           </div>
     
           <div class="text-bottom absolute bottom-4  px-8">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae dicta corporis.</p>
-            <a href="#" class="btn-thin">Learn More</a>
+            <a href="/headshot" class="btn-thin">Learn More</a>
           </div>
-    
         </div>
+
         <!-- Podcast -->
         <div class="service">
-          <a href="#" class="service-plus">
+          <a href="/studio" class="service-plus">
             <i class="fa-solid fa-plus"></i>
           </a>
     
-          <Image src={Service2} alt="Headshot" class="service-img" />
+          <Image src={Service2} alt="Podcast production" class="service-img" />
     
           <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
-            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Lorem ipsum dolor sit.</p>
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Podcast Production</p>
           </div>
     
           <div class="text-bottom absolute bottom-4  px-8">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae dicta corporis.</p>
-            <a href="#" class="btn-thin">Learn More</a>
+            <a href="/studio" class="btn-thin">Learn More</a>
           </div>
     
         </div>
+
         <!-- LinkedIn Profile -->
         <div class="service">
-          <a href="#" class="service-plus">
+          <a href="/linkedin" class="service-plus">
             <i class="fa-solid fa-plus"></i>
           </a>
     
-          <Image src={Service3} alt="Headshot" class="LinkedIn Profile Optimisation" />
+          <Image src={Service3} alt="LinkedIn profile optimisation." class="LinkedIn Profile Optimisation" />
     
           <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
-            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Lorem ipsum dolor sit.</p>
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Linkedin Profile Optimsation</p>
           </div>
     
           <div class="text-bottom absolute bottom-4  px-8">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae dicta corporis.</p>
-            <a href="#" class="btn-thin">Learn More</a>
+            <a href="/linkedin" class="btn-thin">Learn More</a>
           </div>
     
         </div>
@@ -199,7 +200,7 @@ import Service3 from "~/assets/linkedin-profile.png";
 
             <!-- {# call to action #} -->
             <div class="text-center mb-50 mt-50">
-                <a href="#" class="btn btn-yellow">Schedule a Call</a>
+                <a href="/contact" class="btn btn-yellow">Schedule a Call</a>
             </div>
     </div>
     </div>
@@ -327,11 +328,13 @@ import Service3 from "~/assets/linkedin-profile.png";
     width: 100%;
   }
   .service {
+    display: inline-block;
     text-align: center;
     position: relative;
     z-index: 1;
     color: #fff;
     transition: .2s;
+    // display: none;
 
     &:hover,
     &:focus {
