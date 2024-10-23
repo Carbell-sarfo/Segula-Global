@@ -33,7 +33,7 @@ const navItems: Array<NavItem> = [
   <div>
     <div class="flex items-center gap-6">
       <nav class="hidden sm:block">
-        <ul class="flex items-center gap-6">
+        <!-- <ul class="flex items-center gap-6">
           {
             navItems.map(({ title, url }) => (
               <li>
@@ -43,6 +43,34 @@ const navItems: Array<NavItem> = [
               </li>
             ))
           }
+        </ul> -->
+        <ul class="nav-list flex items-center">
+          <li class="nav-item">
+            <a href="/" class="nav-link text-sm">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/studio" class="nav-link text-sm">The Studio</a>
+          </li>
+          <li class="nav-item">
+            <a href="/headshot" class="nav-link text-sm dropbtn">Headshots</a>
+            <ul class="dropdown">
+              <li class="dropdown-item">
+                <a href="vip-headshots" class="dropdown-link text-sm">VIP Headshots</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="headshot-booth" class="dropdown-link text-sm">Headshot Booths</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="team-headshots" class="dropdown-link text-sm">Team Headshots</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="event-photography" class="dropdown-link text-sm">Event Photography</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="/contact" class="nav-link text-sm">Contact us</a>
+          </li>
         </ul>
       </nav>
       <button id="open-nav-button" type="button" class="nav-btn sm:hidden" aria-label="Navigation">
@@ -63,7 +91,7 @@ const navItems: Array<NavItem> = [
             <Image src={Logo} alt="Segula Global Logo" class="logo" />
           </div>
           <nav>
-            <ul class="nav-list flex flex-col">
+            <!-- <ul class="nav-list flex flex-col">
               {
                 navItems.map(({ title, url }) => (
                   <li class="nav-item">
@@ -73,6 +101,35 @@ const navItems: Array<NavItem> = [
                   </li>
                 ))
               }
+            </ul> -->
+
+            <ul class="nav-list flex flex-col">
+              <li class="nav-item">
+                <a href="/" class="nav-link text-sm">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="/studio" class="nav-link text-sm">The Studio</a>
+              </li>
+              <li class="nav-item">
+                <a href="/headshot" class="nav-link text-sm dropbtn">Headshots</a>
+                <ul class="dropdown">
+                  <li class="dropdown-item">
+                    <a href="vip-headshots" class="dropdown-link text-sm">VIP Headshots</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="headshot-booth" class="dropdown-link text-sm">Headshot Booths</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="team-headshots" class="dropdown-link text-sm">Team Headshots</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="event-photography" class="dropdown-link text-sm">Event Photography</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/contact" class="nav-link text-sm">Contact us</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -183,6 +240,87 @@ const navItems: Array<NavItem> = [
     @apply block;
   }
 
+
+  @media screen and (min-width: 639px) {
+    .nav-list {
+
+
+      .nav-item {
+      }
+
+      .nav-link {
+        display: inline-block;
+        padding: 1rem;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        &:hover::after {
+          left: 0;
+        }
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 3px;
+          background-color: var(--clr-yellow);
+          position: absolute;
+          bottom: 0;
+          left: -100%;
+          transition: .2s ease-in;
+        }
+      }
+
+
+      // This is for the drop-down
+      .dropbtn {
+        // background-color: red;
+      }
+      .dropbtn:hover + .dropdown,
+      .dropbtn:focus + .dropdown {
+        display: block;
+      }
+      .dropdown {
+        // padding: 1rem;
+        background-color: rgba(0, 135, 99, 0.868);
+        border-radius: 0 0 .5rem .5rem;
+        position: absolute;
+        top: calc(100% - 1.5rem);
+        min-width: 7rem;
+        transition: .2s;
+        display: none;
+        overflow: hidden;
+
+        &:hover,
+        &:focus {
+          display: block;
+        }
+      }
+      .dropdown-item {
+        
+        border-bottom: 1px solid #01553f;
+        transition: .2s;
+        &:not(:last-child) {
+        }
+
+        &:hover {
+          border-bottom: 1px solid var(--clr-yellow);
+          background-color: #01553f;
+        }
+      }
+      .dropdown-link {
+        display: inline-block;
+        padding: .5rem 1rem;
+      }
+    }
+  }
+
+
+
+
+
+
+@media screen and (max-width: 639px) {
   .nav-list {
     width: 100%;
     height: 100%;
@@ -203,17 +341,65 @@ const navItems: Array<NavItem> = [
     transition: .4s;
   }
   .nav-link {
-    display: inline-block;
+    display: block;
     padding: 1rem 2.5rem;
     background-color: transparent;
-    border: 1px solid #fff;
+    border-bottom: 1px solid #ffffff2d;
     margin-bottom: 1rem;
-    border-radius: .5rem;
+    // border-radius: .5rem;
     transition: .2s;
 
     &:hover {
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.686);
       color: var(--clr-green-dark);
     }
+
   }
+  
+  // This is for the drop-down
+  .dropbtn {
+        // background-color: red;
+      }
+      .dropbtn:hover + .dropdown,
+      .dropbtn:focus + .dropdown {
+        display: block;
+      }
+      .dropdown {
+        // padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.686);
+        color: #000;
+        overflow: hidden;
+        // position: absolute;
+        // top: calc(100%);
+        // left: 50%;
+        // transform: translateX(-50%);
+        min-width: 7rem;
+        width: 90%;
+        margin-inline: auto;
+        margin-top: -1rem;
+        transition: .2s;
+        display: none;
+
+        &:hover,
+        &:focus {
+          display: block;
+        }
+      }
+      .dropdown-item {
+        border-bottom: 1px solid #01553f;
+        transition: .2s;
+        &:not(:last-child) {
+        }
+
+        &:hover {
+          border-bottom: 1px solid var(--clr-yellow);
+          background-color: #01553f;
+        }
+      }
+      .dropdown-link {
+        display: inline-block;
+        padding: .5rem 1rem;
+      }
+
+}
 </style>

@@ -12,6 +12,11 @@ import Headshot3 from "../assets/headshot-3.png"
 import Headshot4 from "../assets/headshot-4.png"
 import Headshot5 from "../assets/headshot-5.png"
 import Headshot6 from "../assets/headshot-6.png"
+
+// Headshot types
+import VIP from "~/assets/vip-headshot.png";
+import HeadshotBooth from "~/assets/headshot-booths.png";
+import Service3 from "~/assets/linkedin-profile.png";
 ---
 
 
@@ -49,6 +54,86 @@ import Headshot6 from "../assets/headshot-6.png"
     </div>
 </section>
 <!-- End of section gallery -->
+
+
+
+  <!-- What we do -->
+  <section class="section-service relative">
+    <div class="container wrapper">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="heading-primary">What We Do</h1>
+        <p class=" mb-24">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit omnis facilis quod consequatur. Amet optio itaque rerum eius incidunt necessitatibus, error reiciendis nostrum voluptatem aspernatur ipsam doloribus odio autem quas!</p>
+      </div>
+
+    </div>
+  </section>
+
+
+<!-- This will be for the section of types of headshots -->
+<section class="section-items">
+    <div class="container wrapper">
+      <!-- Services -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 -mt-60">
+        <!-- Headshot -->
+        <div class="service">
+          <a href="/headshot" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={VIP} alt="Headshot" class="service-img" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Professional Headshots</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae dicta corporis.</p>
+            <a href="/headshot" class="btn-thin">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Podcast -->
+        <div class="service">
+          <a href="/studio" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={HeadshotBooth} alt="Podcast production" class="service-img" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Podcast Production</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae dicta corporis.</p>
+            <a href="/studio" class="btn-thin">Learn More</a>
+          </div>
+    
+        </div>
+
+        <!-- LinkedIn Profile -->
+        <div class="service">
+          <a href="/linkedin" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={Service3} alt="LinkedIn profile optimisation." class="LinkedIn Profile Optimisation" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Linkedin Profile Optimsation</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae dicta corporis.</p>
+            <a href="/linkedin" class="btn-thin">Learn More</a>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of types of headshots -->
+
 
 
 <!-- The process -->
@@ -144,7 +229,7 @@ import Headshot6 from "../assets/headshot-6.png"
 
 //  Section Process
 .section-process {
-    background-color: #90D0C2;
+    // background-color: #90D0C2;
     padding: 8rem 0;
 }
 
@@ -168,4 +253,67 @@ import Headshot6 from "../assets/headshot-6.png"
     margin-bottom: 10px;
     border-radius: 0 0 10px 10px;
 }
+
+
+ // Section services, what we do
+ .section-service {
+    padding-top: 8rem;
+    padding-bottom: 15rem;
+    background-color: var(--clr-green-dark);
+    color: var(--clr-white);
+    width: 100%;
+  }
+  .service {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    transition: .2s;
+    // display: none;
+
+    &:hover,
+    &:focus {
+      transform: scale(.98)
+    }
+
+    &:hover .service-plus, 
+    &:focus .service-plus {
+      color: var(--clr-yellow);
+        background-color: var(--clr-green-dark);
+        border: 1px solid var(--clr-yellow);
+        transform: translateX(-50%) rotateZ(45deg)
+    }
+
+
+    &-plus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-green-dark);
+      background-color: var(--clr-yellow);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: .4s;
+      border: 1px solid transparent;
+
+      &:hover, &:focus {
+        color: var(--clr-yellow);
+        background-color: var(--clr-green-dark);
+        border: 1px solid var(--clr-yellow);
+        transform: translateX(-50%) rotateZ(45deg)
+      }
+    }
+
+    &-img {
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
 </style>
