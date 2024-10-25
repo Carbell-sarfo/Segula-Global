@@ -1,0 +1,325 @@
+---
+import Navigation from "~/components/navigation.astro"
+import MainLayout from "~/layouts/MainLayout.astro"
+import ReadyBanner from "~/components/ready-banner.astro"
+import Footer from "~/components/footer.astro";
+
+import { Image } from "astro:assets";
+
+import Event1 from "../assets/event-1.png"
+import Event2 from "../assets/event-2.png"
+import Event3 from "../assets/event-3.png"
+import Event4 from "../assets/event-4.png"
+import Event5 from "../assets/event-5.png"
+import Event6 from "../assets/event-6.png"
+import Event7 from "../assets/event-7.png"
+import Event8 from "../assets/event-8.png"
+import Event9 from "../assets/event-9.png"
+import Event10 from "../assets/event-10.png"
+import Event11 from "../assets/event-11.png"
+import Event12 from "../assets/event-12.png"
+import Event13 from "../assets/event-13.png"
+import Event14 from "../assets/event-14.png"
+import Event15 from "../assets/event-15.png"
+import Event16 from "../assets/event-16.png"
+import Event17 from "../assets/event-17.png"
+import Event18 from "../assets/event-18.png"
+import Event19 from "../assets/event-19.png"
+import Event20 from "../assets/event-20.png"
+import Event21 from "../assets/event-21.png"
+import Event22 from "../assets/event-22.png"
+import Event23 from "../assets/event-23.png"
+import Event24 from "../assets/event-24.png"
+import Event25 from "../assets/event-25.png"
+import Event26 from "../assets/event-26.png"
+import Event27 from "../assets/event-27.png"
+import Event28 from "../assets/event-28.png"
+
+
+
+import VIP from "../assets/vip-1.png"
+---
+
+
+
+
+<MainLayout title="VIP Headshot | Segula Global">
+    <Navigation />
+
+
+    <!-- Hero section -->
+    <section class="section-hero">
+        <div class="container wrapper w-full h-full">
+        <div class="hero-text mt-24">
+            <h1 class="text-3xl md:text-4xl font-extrabold uppercase">Professional event <br> photography services</h1>
+            <h3 class="text-l md:text-l my-8">Event photography that captures the magic of your event.</h3>
+            <a href="#" class="btn btn-yellow">Lorem Ipsum</a>
+        </div>
+        </div>
+    </section>
+<!-- End of section hero -->
+
+
+<!-- Section Headshot gallery -->
+<section class="section-gallery py-20">
+    <div class="container wrapper">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-4">Capture The Magic of Your Event</h1>
+        <p class="mb-16 text-center">Awesome events deserve amazing photography.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <Image src={Event1} alt="IES 2024" />
+            <Image src={Event2} alt="IES 2024 Dr. yeboah" />
+            <Image src={Event3} alt="IES 2024 Kwame" />
+            <Image src={Event4} alt="IES 2024 Dr. Scott Irvin" />
+            <Image src={Event5} alt="Ghana ASCD druming" />
+            <Image src={Event6} alt="Ghana ASCD" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <Image src={Event7} alt="IES 2024" />
+            <Image src={Event8} alt="IES 2024 Dr. yeboah" />
+            <Image src={Event9} alt="IES 2024 Kwame" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <Image src={Event10} alt="IES 2024" />
+            <Image src={Event11} alt="IES 2024 Dr. yeboah" />
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+            <Image src={Event12} alt="IES 2024" />
+            <Image src={Event13} alt="IES 2024 Dr. yeboah" />
+            <Image src={Event14} alt="IES 2024 Kwame" />
+            <Image src={Event15} alt="IES 2024 Kwame" />
+            <Image src={Event16} alt="IES 2024 Kwame" />
+            <Image src={Event17} alt="IES 2024 Kwame" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <Image src={Event18} alt="IES 2024" />
+            <Image src={Event19} alt="IES 2024 Dr. yeboah" />
+        </div>
+    </div>
+</section>
+<!-- End of section gallery -->
+
+
+<!-- What is included -->
+<section class="section-included pb-32 pt-24">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-primary text-center">What's Included</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <Image src={Event20} alt="What is included in headshot" />
+            </div>
+            <div>
+                <ul class="list-disc ml-4 md:ml-12">
+                    <li class="mb-4">Dedicated pre-event planning call to discuss your schedule, target “shot list”, and any deliverables you want to capture from your event.</li>
+                    <li class="mb-4">All packages include the cost of the professional equipment necessary to cover your event. We will be working with you closely to make sure we’re 100% prepared.</li>
+                    <li class="mb-4">Receive sets of photos the same business day or following business day so that you can immediately post to social-media or the press.</li>
+                    <li class="mb-4">All images will be edited and delivered in organized folders within 3 business days of your event. We will organize your photos so you can easily find them when needed.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of what is included -->
+
+
+<!-- Section ready to go -->
+<ReadyBanner />
+
+
+
+
+
+<!-- Some Events -->
+<section class="section-event pb-32 pt-24">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-primary text-center">Some Events</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <a href="https://caesarsakyi.pixieset.com/ies2024" target="_blank" class="event">
+                <Image src={Event21} alt="Ghana ASCD IES 2024" />
+                <div class="event-text">
+                    <h1>Ghana ASCD</h1>
+                    <p class="yellow-text">IES 2023</p>
+                </div>
+            </a>
+            <a href="https://segulaglobal.pixieset.com/itsnowllama32/" target="_blank" class="event">
+                <Image src={Event22} alt="AlU & Meta Build with Llama" />
+                <div class="event-text">
+                    <h1>Build with Llama</h1>
+                    <!-- <p class="yellow-text">IES 2023</p> -->
+                </div>
+            </a>
+            <a href="https://segulaglobal.pixieset.com/shecanicacademy/" target="_blank" class="event">
+                <Image src={Event23} alt="Shecanic Academy Workshop" />
+                <div class="event-text">
+                    <h1>Shecanic Academy</h1>
+                    <!-- <p class="yellow-text">IES 2023</p> -->
+                </div>
+            </a>
+            <a href="https://segulaglobal.pixieset.com/congratulationsalxdatascientists/" target="_blank" class="event">
+                <Image src={Event24} alt="Alx Data Science Graduation" />
+                <div class="event-text">
+                    <h1>ALX Data Science Graduation</h1>
+                    <!-- <p class="yellow-text">IES 2023</p> -->
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- End of Secome Events -->
+
+
+
+
+
+
+
+<div class="section-faq">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-primary">FAQs</h2>
+        </div>
+        <div class="max-w-4xl mx-auto">
+            <div data-ui-tablist class="ui-accordion" data-ui-transition="collapse">
+                <!-- faq-1 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, amet.
+                    </button>
+                    <div data-ui-tablist-tabpanel>
+                        <div class="ui-accordion-body"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas incidunt nihil laudantium culpa, tempore, voluptatem reprehenderit possimus atque similique praesentium illo officia cumque. Architecto quia delectus explicabo assumenda, hic quod provident nihil dolorum quibusdam ducimus. </div>
+                    </div>
+                </div>
+
+                <!-- faq-2 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Accordion header #2</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas incidunt nihil laudantium culpa, tempore, voluptatem reprehenderit possimus atque similique praesentium illo officia cumque. Architecto quia delectus explicabo assumenda, hic quod provident nihil dolorum quibusdam ducimus.</div>
+                    </div>
+                </div>
+
+                <!-- faq-3 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Accordion header #2</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas incidunt nihil laudantium culpa, tempore, voluptatem reprehenderit possimus atque similique praesentium illo officia cumque. Architecto quia delectus explicabo assumenda, hic quod provident nihil dolorum quibusdam ducimus.</div>
+                    </div>
+                </div>
+
+                <!-- faq-4 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Accordion header #2</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas incidunt nihil laudantium culpa, tempore, voluptatem reprehenderit possimus atque similique praesentium illo officia cumque. Architecto quia delectus explicabo assumenda, hic quod provident nihil dolorum quibusdam ducimus.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <Footer />
+</MainLayout>
+
+
+
+
+<style lang=scss>
+    .section-hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(/event-bg.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    .hero-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+  }
+
+
+
+//   section evetns
+.section-event {
+
+    .event {
+        position: relative;
+        transition: .2s;
+
+        &:hover, 
+        &:focus {
+            scale: .95;
+            transform: translate(0, -5px); 
+        }
+        &:hover > .event-text {
+            transform: translate(-50%, 0px);
+        }
+
+        .event-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            transition: .2s;
+
+            h1 {
+                font-weight: bold;
+                color: #fff;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.section-faq {
+    padding: 8rem 0;
+    background-color: var(--clr-green-dark);
+    color: var(--clr-white);
+    border-bottom: 1px solid #647065;
+}
+
+
+.ui-accordion-header {
+    border-bottom: 1px solid #4a4a4a;
+    margin-bottom: 2rem;
+
+    &:hover {
+        color: var(--clr-yellow);
+    }
+}
+.ui-accordion-header:where(.ui-active) {
+    color: yellow;
+}
+
+
+</style>
