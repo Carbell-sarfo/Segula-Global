@@ -28,7 +28,7 @@ import StudioFaq from "~/components/studio-faq.astro";
                 <h1 class="text-8xl md:text-8xl font-extrabold">The Studio</h1>
                 <p class="my-8">Our well equipped studio is designed for professional headshots, videos, and high-quality podcast production</p>
                 <div>
-                    <a href="#" class="btn btn-yellow ">Book a Session</a>
+                    <a href="#studio-options" class="btn btn-yellow ">Studio Options</a>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@ import StudioFaq from "~/components/studio-faq.astro";
 
 
     <!-- Studio Options -->
-    <section class="section-options py-24">
+    <section class="section-options py-24" id="studio-options">
         <div class="container wrapper">
             <div class="text-center">
                 <h1 class="heading-primary">Our Studio Options</h1>
@@ -68,7 +68,7 @@ import StudioFaq from "~/components/studio-faq.astro";
                     <Image src={Studio1} alt="Solo Podcast Studio" />
                 </div>
                 <div>
-                    <h3>Studio 1</h3>
+                    <h3 class="font-bold text-xl">Studio 1</h3>
                     <p>Photography and Video Studio</p>
                     <ul class="list-disc ml-8 mb-8">
                         <li>High-Quality Lighting Setup</li>
@@ -83,7 +83,7 @@ import StudioFaq from "~/components/studio-faq.astro";
             <!-- Studio-2 -->
             <div class="studio-1 grid grid-cols-1 md:grid-cols-3 gap-8 items-center pt-16">
                 <div>
-                    <h3>Studio 1</h3>
+                    <h3 class="font-bold text-xl">Studio 2</h3>
                     <p>Podcast & Recording Studio</p>
                     <ul class="list-disc ml-8 mb-8">
                         <li>Broadcast-Quality Microphones</li>
@@ -101,7 +101,7 @@ import StudioFaq from "~/components/studio-faq.astro";
     <!-- End of studio options -->
 
     <!-- our Studio pricing -->
-     <StudioPricing />
+     <!-- <StudioPricing /> -->
 
     <!-- Studio Banner -->
     <StudioBanner />
