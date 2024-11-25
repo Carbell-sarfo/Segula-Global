@@ -1,0 +1,199 @@
+---
+import MainLayout from "~/layouts/MainLayout.astro";
+import Navigation from "~/components/navigation.astro";
+import ReadyBanner from "~/components/ready-banner.astro";
+import Footer from "~/components/footer.astro";
+
+import { Image } from "astro:assets";
+import Booth1 from "~/assets/booth-1.png";
+import Booth2 from "~/assets/booth-2.png";
+import Booth3 from "~/assets/booth-3.png";
+import Booth4 from "~/assets/booth-4.png";
+import Booth5 from "~/assets/booth-5.png";
+import Booth6 from "~/assets/booth-6.png";
+import Booth7 from "~/assets/booth-7.png";
+import Booth8 from "~/assets/booth-8.png";
+import Booth9 from "~/assets/booth-9.png";
+import Booth10 from "~/assets/booth-10.png";
+import Booth11 from "~/assets/booth-11.png";
+import Booth12 from "~/assets/booth-12.png";
+import Booth13 from "~/assets/booth-13.png";
+
+
+
+---
+
+
+
+
+
+<MainLayout title="Headshot Booth | Segula Global">
+    <Navigation />
+
+
+    <!-- Hero section -->
+    <section class="section-hero">
+        <div class="container wrapper w-full h-full">
+        <div class="hero-text mt-24">
+            <h1 class="text-3xl md:text-4xl font-extrabold uppercase">Professional Headshot Booths <br>  for Events</h1>
+            <h3 class="text-l md:text-l my-8">We offer headshot booths at event venues across Ghana, and beyond.</h3>
+            <a href="#" class="btn btn-yellow">Schedule A Shoot</a>
+        </div>
+        </div>
+    </section>
+<!-- End of section hero -->
+
+
+<!-- Section Headshot gallery -->
+<section class="section-gallery py-20">
+    <div class="container wrapper">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-4">A Professional Headshot Booth Experience Attendees Will Love</h1>
+        <p class="mb-16 text-center">Give them the gift of high-end professional headshots.</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <Image src={Booth1} alt="IES 2024" />
+            <Image src={Booth2} alt="IES 2024" />
+            <Image src={Booth3} alt="IES 2024" />
+            <Image src={Booth4} alt="IES 2024" />
+            <Image src={Booth5} alt="IES 2024" />
+            <Image src={Booth6} alt="IES 2024" />
+            <Image src={Booth7} alt="IES 2024" />
+            <Image src={Booth8} alt="IES 2024" />
+            <Image src={Booth9} alt="IES 2024" />
+            <Image src={Booth10} alt="IES 2024" />
+            <Image src={Booth11} alt="IES 2024" />
+            <Image src={Booth12} alt="IES 2024" />
+        </div>
+    </div>
+</section>
+<!-- End of section gallery -->
+
+
+<!-- What is included -->
+<section class="section-included pb-32 pt-24">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-primary text-center">What's Included</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <Image src={Booth13} alt="What is included in headshot" />
+            </div>
+            <div>
+                <ul class="list-disc ml-4 md:ml-12">
+                    <li class="mb-4">Fully tailored sessions designed to match your event and audience. Whether it's a classic headshot setup or a creative “Magazine Cover” experience, we customize everything to fit your vision.</li>
+                    <li class="mb-4">Top-notch lighting, posing guidance, and expression assistance to ensure your attendees look their absolute best in every shot.</li>
+                    <li class="mb-4">We keep the vibe lively with music, light-hearted humor, and an engaging atmosphere, ensuring the entire experience is fun and memorable.</li>
+                    <li class="mb-4">Instant photo view on-site using a computer setup, allowing participants to see their photos immediately and make adjustments for the perfect shot. Optional premium add-ons like printing.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of what is included -->
+
+
+<!-- Section ready to go -->
+<ReadyBanner />
+
+<div class="section-faq">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-primary">FAQs</h2>
+        </div>
+        <div class="max-w-4xl mx-auto">
+            <div data-ui-tablist class="ui-accordion" data-ui-transition="collapse">
+                <!-- faq-1 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">How many hours can we book the photobooth for?
+                    </button>
+                    <div data-ui-tablist-tabpanel>
+                        <div class="ui-accordion-body"> You can book the photobooth for a minimum of 2 hours, with the option to extend based on your event needs. </div>
+                    </div>
+                </div>
+
+                <!-- faq-2 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Can we personalize the photos with our event branding?</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Yes, absolutely! We can customize the photos with your logo, event details, or branding elements to match the theme of your event.</div>
+                    </div>
+                </div>
+
+                <!-- faq-3 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">How long does it take to receive the digital photos after the event?</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Digital copies are provided through an online gallery link, typically sent to you within 72 hours of the event.
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- faq-4 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Will participants be able to see their photos immediately?</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Yes, we offer instant photo review on-site using a computer setup (tethering), allowing participants to check and adjust their shots for results they love.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<Footer />
+</MainLayout>
+
+
+
+<style lang="scss">
+
+.section-hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(/booth-bg.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    .hero-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+.section-faq {
+    padding: 8rem 0;
+    background-color: var(--clr-green-dark);
+    color: var(--clr-white);
+    border-bottom: 1px solid #647065;
+}
+
+
+.ui-accordion-header {
+    border-bottom: 1px solid #4a4a4a;
+    margin-bottom: 2rem;
+
+    &:hover {
+        color: var(--clr-yellow);
+    }
+}
+.ui-accordion-header:where(.ui-active) {
+    color: yellow;
+}
+</style>

@@ -1,0 +1,224 @@
+---
+import { Image } from "astro:assets";
+import Footer from "~/components/footer.astro";
+import StudioBanner from "~/components/studio-banner.astro";
+import MainLayout from "~/layouts/MainLayout.astro";
+
+import ContactImg from "~/assets/contact-img.png"
+import Navigation2 from "~/components/navigation-2.astro";
+---
+
+
+
+
+
+<MainLayout title="Contact Us | Segula Global">
+    <!-- Second Navigation -->
+    <Navigation2 />
+
+    <!-- hero section -->
+    <section class="contact-hero">
+        <div class="container wrapper">
+            <div class="hero-text">
+                <h1 class="text-8xl md:text-8xl font-extrabold mb-4">Contact Us</h1>
+                <p>We’d love to hear from you. Let’s discuss how we can bring your vision to life with our tailored services.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Form section -->
+    <section class="section-form" id="contact">
+        <div class="container wrapper">
+            <div class="form-container grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 px-8 py-8">
+                    <h3 class="">Send us a message</h3>
+                    <!-- contact form -->
+                    <form action="#">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="input-field">
+                                <label for="fname">First Name</label>
+                                <input type="text" name="fname" id="fname" placeholder="Your first name" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="lname">Last Name</label>
+                                <input type="text" name="lname" id="lname" placeholder="Your Last name" required>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="contact">Contact Number</label>
+                            <input type="tel" name="contact" id="contact" placeholder="+134 203 947 480" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="message">Message</label>
+                            <textarea cols="30" rows="8" name="message" id="message" placeholder="start here ..." required></textarea>
+                        </div>
+                        <input type="submit" value="Submit" class="btn btn-neutral">
+
+                    </form>
+                    <!-- end of contact form -->
+                </div>
+
+                <div class="z-1 contact-container">
+                    <Image src={ContactImg} alt="Contact Segula" />
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <div class="contact-link">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3>Email Us</h3>
+                                <p>Sarfocarbell@gmail.com</p>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-link">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p>+233 241 105 423</p>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-link">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3>Find Us</h3>
+                                <p>Address: 47 Passion Hill Street</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <StudioBanner />
+
+    <!-- footer -->
+    <Footer />
+</MainLayout>
+
+
+
+
+<style lang="scss">
+    .contact-hero {
+        width: 100%;
+        height: 80vh;
+        background-color: var(--clr-green);
+        padding-bottom: 5rem;
+    }
+
+    .hero-text {
+        color: var(--clr-white);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .section-form {
+        padding: 10rem 0 8rem;
+
+        .form-container {
+            box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-top: -15rem;
+            background-color: var(--clr-white);
+        }
+
+        form {
+            
+            .input-field {
+                margin-bottom: .5rem;
+                width: 100%;
+
+                input, textarea {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    resize: none;
+                    background-color: rgb(250, 250, 250);
+                    padding: .5rem 1rem;
+                    border-radius: .5rem;
+                    font-family: inherit;
+                    border: 1px solid #dbdbdb;
+                    transition: .2s;
+
+                    &:focus,
+                    &:valid {
+                        border: 1px solid var(--clr-green);
+                    }
+                }
+                label {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: #4a4a4a;
+                }
+            }
+        }
+
+        .contact-container {
+            width: 100%;
+            z-index: 1;
+            position: relative;
+            padding: 2rem 1rem;
+            color: #fff;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+
+                z-index: -1;
+            }
+
+            .contact-list {
+                list-style: none;
+
+                .contact-item {
+                    display: flex;
+
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
+                }
+                .contact-link {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    display: flex;
+                    border-radius: 50%;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid var(--clr-yellow);
+                    margin-right: 1rem;
+                }
+
+                h3 {
+                    font-size: .9rem;
+                    color: var(--clr-yellow);
+
+                }
+            }
+        }
+    }
+
+</style>

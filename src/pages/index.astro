@@ -1,0 +1,603 @@
+---
+import "@fontsource-variable/inter";
+import Compatibility from "~/components/compatibility.astro";
+import Features from "~/components/features.astro";
+import Footer from "~/components/footer.astro";
+import Navigation from "~/components/navigation.astro";
+import Intro from "~/components/intro.astro";
+import Showcase from "~/components/showcase.astro";
+import Splash from "~/components/splash.astro";
+import "~/styles/index.css";
+import MainLayout from "~/layouts/MainLayout.astro";
+import LinkedinBanner from "~/components/linkedin-banner.astro";
+import { Image } from "astro:assets";
+
+import About1 from "~/assets/about-studio.png";
+import Service1 from "~/assets/headshot.png";
+import Service2 from "~/assets/podcast.png";
+import Service3 from "~/assets/linkedin-profile.png";
+---
+
+<MainLayout title="Segula Global | Home" description="Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.">
+
+  <!-- navigation -->
+  <Navigation />
+
+  <!-- Hero section -->
+  <section class="section-hero">
+    <div class="container wrapper w-full h-full">
+      <div class="hero-text">
+        <h1 class="text-8xl md:text-8xl font-extrabold">Transform Your Presence With Us</h1>
+        <h3 class="yellow-text text-2xl md:text-2xl font-bold my-8">Make Your Mark</h3>
+        <a href="#solutions" class="btn btn-neutral__white">Our Solutions</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About us -->
+  <section class="section-about">
+    <div class="container wrapper">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+        <div>
+          <Image src={About1} alt="About Segula Global Image" />
+        </div>
+        <div>
+          <h2 class="mb-8">If this is your first time here, welcome! We are Segula Global</h2>
+          <p class="mb-8">A digital agency focused on helping you put your best self forward. Specializing in Professional Headshots, Podcast Production, and LinkedIn Profile Optimization, we’re here to make sure your online presence is as polished and compelling as you are. </p>
+          <p >Whether it's capturing the perfect professional image, creating impactful podcasts, or crafting a LinkedIn profile that tells your story, we focus on providing high-quality services to empower your brand. Let’s work together.</p>
+        </div>
+      </div>
+
+      <!-- mission and vision -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="mission left">
+          <h2 class="text-4xl md:text-4xl font-extrabold mb-4">Our Mission</h2>
+          <p>We are here to empower professionals and thought leaders by creating authentic, impactful digital identities that drive connection, inspire trust, and amplify influence.</p>
+        </div>
+        <div class="mission right">
+          <h2 class="text-4xl md:text-4xl font-extrabold mb-4">Our Vision</h2>
+          <p>To be the leading partner in personal branding, helping individuals and organizations shape narratives that resonate, inspire, and lead to meaningful impact in the world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- What we do -->
+  <section class="section-service relative" id="solutions">
+    <div class="container wrapper">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="heading-primary">What We Do</h1>
+        <p class=" mb-24">At Segula Global, we work with individuals and brands to amplify digital presence. Through expertly crafted LinkedIn profiles, podcast productions, and professional images, we help you connect, inspire, and stand out.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section-items">
+    <div class="container wrapper">
+      <!-- Services -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 -mt-60">
+        <!-- Headshot -->
+        <div class="service">
+          <a href="/headshot" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={Service1} alt="Headshot" class="service-img" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Professional Headshots</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p>Capture your essence with stunning professional headshots.</p>
+            <a href="/headshot" class="btn-thin">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Podcast -->
+        <div class="service">
+          <a href="/studio" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={Service2} alt="Podcast production" class="service-img" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Podcast Production</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p>Set up and grow your podcast.</p>
+            <a href="/studio" class="btn-thin">Learn More</a>
+          </div>
+    
+        </div>
+
+        <!-- LinkedIn Profile -->
+        <div class="service">
+          <a href="/linkedin" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={Service3} alt="LinkedIn profile optimisation." class="LinkedIn Profile Optimisation" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Linkedin Profile Optimsation</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p>Take your LinkedIn from ordinary to outstanding.</p>
+            <a href="/linkedin" class="btn-thin">Learn More</a>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  
+  <!-- {# ========================= Section-Process =================== #} -->
+<section class="section-process">
+    <div class="container wrapper">
+        <div class="text-center mb-50 mt-50">
+            <h1 class="heading-primary">Our Process</h1>
+        </div>
+
+<!-- {# =================== Timeline cards for process ============== #} -->
+        <div class="timeline-main">
+            <div class="timeline-wrap">
+                <div class="timeline-card">
+                    <div class="timeline-card-wrap">
+                        <div class="card-head-wrap">
+                        <h2 class="timeline-card-head">Start with a Conversation</h2>
+                        <h6 class="timeline-card-subhead">1st Step</h6>
+                        </div>
+                        <p class="timeline-card-text">
+                          We start with an initial conversation to understand your brand, goals, and vision. This helps us align our approach with your values and objectives while setting clear expectations, including a discussion on budget. </p>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-wrap">
+                        <div class="card-head-wrap">
+                        <h2 class="timeline-card-head">Planning & Pricing</h2>
+                        <h6 class="timeline-card-subhead">Step 2</h6>
+                        </div>
+                        <p class="timeline-card-text">Once we understand your needs, we provide a tailored outline. This roadmap covers all stages, timelines, and costs, allowing you to see exactly where your investment is going.</p>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-wrap">
+                        <div class="card-head-wrap">
+                        <h2 class="timeline-card-head"> Implementation</h2>
+                        <h6 class="timeline-card-subhead">Step 3</h6>
+                        </div>
+                        <p class="timeline-card-text">
+                          We move forward to launch and execute your project, managing all elements to ensure smooth, professional delivery. </p>
+                    </div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-card-wrap">
+                        <div class="card-head-wrap">
+                        <h2 class="timeline-card-head"> Evaluation</h2>
+                        <h6 class="timeline-card-subhead">Step 4</h6>
+                        </div>
+                        <p class="timeline-card-text">As always, let us handle the heavy lifting. We take care of the implementation, monitor progress, and continuously evaluate effectiveness. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container wrapper">
+            <!-- {# call to action text #} -->
+            <p style="margin: 4rem auto; width: 100%; max-width: 1000px; text-align: center;">We understand that you're too busy to navigate this journey alone and this process embodies our commitment to building your brand while you remain focused on your primary role.</p>
+
+            <!-- {# call to action #} -->
+            <div class="text-center mb-50 mt-50">
+                <a href="/contact" class="btn btn-yellow">Schedule a Call</a>
+            </div>
+    </div>
+    </div>
+</section>
+<!-- {# End of process section #} -->
+
+
+
+
+  <LinkedinBanner />
+
+  <Footer />
+</MainLayout>
+
+
+
+
+
+
+
+<script is:inline>
+  // const themeSaved = localStorage.getItem("theme");
+
+  // if (themeSaved) {
+  //   document.documentElement.dataset.theme = themeSaved;
+  // } else {
+  //   const prefersDark = window.matchMedia(
+  //     "(prefers-color-scheme: dark)",
+  //   ).matches;
+  //   document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+  // }
+
+  // window
+  //   .matchMedia("(prefers-color-scheme: dark)")
+  //   .addEventListener("change", (event) => {
+  //     if (!localStorage.getItem("theme")) {
+  //       document.documentElement.dataset.theme = event.matches
+  //         ? "dark"
+  //         : "light";
+  //     }
+  //   });
+</script>
+
+
+
+
+<style lang="scss">
+  .section-hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(/home-bg.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    .hero-text {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+
+
+  // Secction About
+  .section-about {
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    padding: 8rem 0;
+  }
+
+  .mission {
+    background-color: var(--clr-yellow);
+    color: var(--clr-green-dark);
+    padding: 2rem;
+    padding-bottom: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+
+    &.right {
+
+      &::after {
+
+        left: -2.5rem;
+      }
+    }
+    &.left {
+
+      &::after {
+
+        right: -2.5rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: var(--clr-green);
+      position: absolute;
+      bottom: -2.5rem;
+      // right: 0;
+    }
+  }
+
+
+
+
+
+  // Section services, what we do
+  .section-service {
+    padding-top: 8rem;
+    padding-bottom: 15rem;
+    background-color: var(--clr-green-dark);
+    color: var(--clr-white);
+    width: 100%;
+  }
+  .service {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    transition: .2s;
+    // display: none;
+
+    &:hover,
+    &:focus {
+      transform: scale(.98)
+    }
+
+    &:hover .service-plus, 
+    &:focus .service-plus {
+      color: var(--clr-yellow);
+        background-color: var(--clr-green-dark);
+        border: 1px solid var(--clr-yellow);
+        transform: translateX(-50%) rotateZ(45deg)
+    }
+
+
+    &-plus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-green-dark);
+      background-color: var(--clr-yellow);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: .4s;
+      border: 1px solid transparent;
+
+      &:hover, &:focus {
+        color: var(--clr-yellow);
+        background-color: var(--clr-green-dark);
+        border: 1px solid var(--clr-yellow);
+        transform: translateX(-50%) rotateZ(45deg)
+      }
+    }
+
+    &-img {
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+
+
+  // Our Process
+  
+
+// ============== How we work ==============
+.section-process {
+    padding: 10rem 0;
+}
+
+.timeline-main {
+        width: 100%;
+        padding: 25px;
+        
+        .timeline-wrap {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 4px;
+                height: calc(100% - 10px);
+                background-color: var(--clr-green);
+                animation: line 5s linear;
+                
+                @media (max-width: 767px) {
+                    left: 95%;
+                }
+            }
+            
+            .timeline-card {
+                width: 50%;
+        margin-right: auto;
+        position: relative;
+        @media (max-width: 767px) {
+            width: 95%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background: var(--clr-yellow);
+            animation: fadeIn 1.5s;
+            animation-fill-mode: both;
+        }
+
+
+        .timeline-card-wrap {
+            height: 100%;
+            margin-right: 35px;
+            background-color: var(--clr-green);
+            border-radius: 10px;position: relative;
+            padding: 30px;
+            animation: fadeInRight 2.5s;
+            animation-fill-mode: both;
+
+            @media (max-width: 767px) {
+                padding: 20px;
+            }
+
+
+            &::before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: -8px;
+            height: 8px;
+            width: calc(100% - 60px);
+            background-color: var(--clr-green-dark);
+            border-radius: 5px 5px 0 0;
+            opacity: 0.3;
+            }
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 10px;
+                right: -8px;
+                width: 20px;
+                height: 20px;
+                background-color: var(--clr-green);
+                border-radius: 5px;
+                transform: rotate(45deg);
+            }
+
+
+            .card-head-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                @media (max-width: 1199px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                }
+
+
+            .timeline-card-head {
+                font-size: 28px;
+                line-height: 38px;
+                font-weight: 500;
+                color: #fff;
+                margin-bottom: 0;
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+
+
+                .timeline-card-subhead {
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 400;
+                color: #bdbdbd;
+                margin-bottom: 0;
+                font-style: italic;
+                @media (max-width: 767px) {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                }
+            }
+
+            .timeline-card-text {
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 400;
+                color: var(--clr-white);
+                margin: 25px 0 0;
+                @media (max-width: 767px) {
+                font-size: 12px;
+                line-height: 22px;
+                }
+            }
+        }
+
+            &:nth-child(even) {
+            @media (min-width: 768px) {
+                margin-left: auto;
+                margin-right: 0;
+                &::after {
+                right: unset;
+                left: -10px;
+                animation-delay: 2.6s;
+                }
+                .timeline-card-wrap {
+                margin-right: 0;
+                margin-left: 35px;
+                animation: fadeInLeft 2.5s;
+                animation-fill-mode: both;
+                animation-delay: 2.5s;
+                &::after {
+                    right: unset;
+                    border-left: none;
+                    left: -8px;
+                    border-right: 10px solid var(--clr-green);
+                }
+                }
+            }
+            }
+        }
+        }
+    }
+
+    @keyframes line {
+        0% {
+        height: 0;
+        }
+    
+        100% {
+        height: calc(100% - 10px);
+        }
+    }
+    @keyframes fadeIn {
+        from {
+        opacity: 0;
+        }
+    
+        to {
+        opacity: 1;
+        }
+    }
+    @keyframes fadeInRight {
+        0% {
+        opacity: 0;
+        transform: translateX(20px);
+        }
+        100% {
+        opacity: 1;
+        transform: translateX(0);
+        }
+    }
+    @keyframes fadeInLeft {
+        0% {
+        opacity: 0;
+        transform: translateX(-20px);
+        }
+        100% {
+        opacity: 1;
+        transform: translateX(0);
+        }
+    }
+
+
+</style>

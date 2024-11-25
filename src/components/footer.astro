@@ -1,0 +1,149 @@
+---
+import { Icon } from "astro-icon/components";
+import HeroImage from "~/components/hero-image.astro";
+import type { FooterLink } from "~/types";
+
+const links: Array<FooterLink> = [
+  {
+    url: "https://www.youtube.com/@segulaglobal",
+    description: "Grow you influence with YouTube",
+    icon: "fa-brands fa-youtube",
+  },
+  {
+    url: "https://www.linkedin.com/company/100048598/admin/dashboard/",
+    description: "Impact your connections on LinkedIn",
+    icon: "fa-brands fa-linkedin-in",
+  },
+  {
+    url: "https://www.instagram.com/segulaglobal/",
+    description: "Follow us on Instagram",
+    icon: "fa-brands fa-instagram",
+  },
+];
+---
+
+<footer class="pt-24 section-footer">
+  <div class="container wrapper">
+
+    <!-- Quote -->
+    <div class="quote text-center max-w-4xl mx-auto">
+      <p class="mb-8">Start by knowing what you want and who you are, build credibility around it and deliver it online in a compelling way. </p>
+
+      <h3 class="quote-title yellow-text italic">Krista Neher</h3>
+    </div>
+
+    <!-- Social media icons -->
+    <ul class="social-list flex items-center justify-center gap-4 py-16 pt-20">
+      {
+        links.map((link) => (
+          <li class="social-item">
+            <a class="social-link" href={link.url} target="_blank" >
+              {/* <span class="sr-only">{link.description}</span> */}
+              <i class={link.icon}></i>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+
+    <p class="copy text-center text-slate-300 text-sm pb-4">© 2023 Segula Global. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+<style lang="scss">
+
+// section footer
+.section-footer {
+  background-color: var(--clr-green-dark);
+  color: #D9D9D9;
+}
+
+
+.social-list {
+
+  .social-item {
+
+    &:nth-child(1) .social-link {
+      color: red;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::after {
+        background-color: red;
+      }
+    }
+    &:nth-child(2) .social-link {
+      color: #0077B5;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::after {
+        background-color: #0077B5;
+      }
+    }
+    &:nth-child(3) .social-link {
+      color: #D62976;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::after {
+        background-image: linear-gradient(to bottom, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+      }
+    }
+  }
+
+  .social-link {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .2s;
+
+    &:hover, &:focus {
+      color: #fff;
+      scale: .9;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      top: 0;
+    }
+
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: green;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: .2s;
+      z-index: -1;
+    }
+  }
+}
+</style>

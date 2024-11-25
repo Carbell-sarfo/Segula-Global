@@ -1,0 +1,196 @@
+---
+import Navigation from "~/components/navigation.astro";
+import MainLayout from "~/layouts/MainLayout.astro";
+import LinkedinBanner from "~/components/linkedin-banner.astro";
+import Footer from "~/components/footer.astro";
+
+
+---
+
+
+<MainLayout title="LinkedIn Optimisation">
+    <Navigation />
+
+
+    <!-- Section hero -->
+    <!-- Hero section -->
+    <section class="section-hero">
+        <div class="container wrapper w-full h-full">
+        <div class="hero-text">
+            <h1 class="text-8xl md:text-8xl font-extrabold">Digital Presence Into Real-World Impact</h1>
+            <h3 class="yellow-text text-2xl md:text-2xl font-bold my-8">Take your LinkedIn profile from just another page to a powerful branding tool.</h3>
+            <a href="#" class="btn btn-neutral__white">Get Started</a>
+        </div>
+        </div>
+    </section>
+    <!-- End of section hero -->
+
+    
+    <!-- section Linkedin offers -->
+    <section class="section-offers py-32">
+    <div class="container wrapper">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="offer">
+                <h3>Build my team or company on Linkedin</h3>
+                <p>Let us help you build a strong, engaging LinkedIn presence that showcases your team’s culture, values, and opportunities. With the right strategy, we’ll optimize your company page and team profiles</p>
+                <a href="/studio" class="btn-thin">Learn More</a>
+            </div>
+            <div class="offer second">
+                <h3>Makeover My LinkedIn Profile</h3>
+                <p>Your LinkedIn profile is more than just an online resume—it’s a powerful personal branding tool. If yours is outdated or not standing out, we’ll help you transform it into a compelling story that attracts opportunities.</p>
+                <a href="/studio" class="btn-thin">Learn More</a>
+            </div>
+            <div class="offer">
+                <h3>Build a Company LinkedIn Page</h3>
+                <p>We’ll craft a profile that not only attracts potential clients and partners but also showcases your company’s unique culture, vision, and achievements.</p>
+                <a href="/studio" class="btn-thin">Learn More</a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- The process -->
+    <div class="section-process">
+        <div class="container wrapper">
+            <div class="text-center">
+                <h2 class="heading-primary">Process</h2>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div data-ui-tablist class="ui-accordion" data-ui-transition="collapse">
+                    <!-- process-1 -->
+                    <div class="ui-accordion-item">
+                        <button data-ui-tablist-tab class="ui-accordion-header">Discovery & Strategy</button>
+                        <div data-ui-tablist-tabpanel>
+                            <div class="ui-accordion-body"> We start by understanding your goals, audience, and current LinkedIn presence. Through a detailed consultation, we identify your key objectives—whether it’s building your personal brand, attracting top talent, or positioning your company for growth. From there, we create a LinkedIn strategy that aligns with your goals.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- process-2 -->
+                    <div class="ui-accordion-item">
+                        <button data-ui-tablist-tab class="ui-accordion-header">Profile Optimization & Content Creation</button>
+                        <div data-ui-tablist-tabpanel hidden>
+                            <div class="ui-accordion-body">Once we have a strategy, we optimize your LinkedIn profile or page. This includes refining your headline, summary, experience, among other things. We also create content that showcases your expertise or company culture to keep your audience engaged and help you stand out in the crowded LinkedIn space.</div>
+                        </div>
+                    </div>
+
+                    <!-- process-3 -->
+                    <div class="ui-accordion-item">
+                        <button data-ui-tablist-tab class="ui-accordion-header">Implementation & Engagement</button>
+                        <div data-ui-tablist-tabpanel hidden>
+                            <div class="ui-accordion-body">After optimizing your profiles, we implement the plan, posting content regularly and engaging with your network. Whether it’s joining relevant conversations, sharing thought leadership, or highlighting company achievements, we ensure your presence is active and resonating.</div>
+                        </div>
+                    </div>
+
+                    <!-- process-4 -->
+                    <div class="ui-accordion-item">
+                        <button data-ui-tablist-tab class="ui-accordion-header">Analytics & Refinement</button>
+                        <div data-ui-tablist-tabpanel hidden>
+                            <div class="ui-accordion-body">We continuously monitor the performance of your LinkedIn activity through insights and analytics. By analyzing engagement rates, connection growth, and content performance, we fine-tune our approach for maximum impact, ensuring that your profile or company page keeps evolving.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <LinkedinBanner />
+
+    <Footer />
+
+
+
+</MainLayout>
+
+
+
+
+
+
+
+<style lang="scss">
+
+
+.section-hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(/linkedin-bg.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    .hero-text {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+
+
+
+
+
+.section-offers {
+    background-color: var(--clr-green);
+    color: #fff;
+
+    .offer {
+        padding: 1rem;
+
+        h3 {
+            font-weight: bold;
+            font-size: 1.6rem;
+            line-height: 1.4;
+            margin-bottom: 1rem
+        }
+    }
+
+    .offer.second {
+        border-inline: 1px solid #90D0C2;
+    }
+}
+@media screen and (max-width: 767px) {
+    .section-offers .offer.second {
+        border-inline: none;
+
+    }
+}
+
+
+
+
+//  Section Process
+.section-process {
+    background-color: #90D0C2;
+    padding: 8rem 0;
+}
+
+.ui-accordion-header {
+    border-bottom: 1px solid #4a4a4a;
+    margin-bottom: 2rem;
+    background-color: var(--clr-green-dark);
+    color: #90D0C2;
+
+    &:hover {
+        color: var(--clr-yellow);
+    }
+}
+.ui-accordion-header:where(.ui-active) {
+    color: yellow;
+}
+.ui-accordion-body {
+    background-color: var(--clr-green-dark);
+    color: #fff;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+}
+</style>

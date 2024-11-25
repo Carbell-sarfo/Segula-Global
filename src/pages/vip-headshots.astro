@@ -1,0 +1,116 @@
+---
+import Navigation from "~/components/navigation.astro"
+import MainLayout from "~/layouts/MainLayout.astro"
+import ReadyBanner from "~/components/ready-banner.astro"
+import Footer from "~/components/footer.astro";
+
+import { Image } from "astro:assets";
+
+import Headshot1 from "../assets/headshot-1.png"
+import Headshot2 from "../assets/headshot-2.png"
+import Headshot3 from "../assets/headshot-3.png"
+import Headshot4 from "../assets/headshot-4.png"
+import Headshot5 from "../assets/headshot-5.png"
+import Headshot6 from "../assets/headshot-6.png"
+
+import VIP from "../assets/vip-1.png"
+---
+
+
+
+
+<MainLayout title="VIP Headshot | Segula Global">
+    <Navigation />
+
+
+    <!-- Hero section -->
+    <section class="section-hero">
+        <div class="container wrapper w-full h-full">
+        <div class="hero-text mt-24">
+            <h1 class="text-3xl md:text-4xl font-extrabold">VIP HEADSHOT & BRANDING PHOTOSHOOT</h1>
+            <h3 class="text-l md:text-l my-8">Designed for executives and entrepreneurs who want to take their career or business to the next level.</h3>
+            <a href="#" class="btn btn-yellow">Book a Session</a>
+        </div>
+        </div>
+    </section>
+<!-- End of section hero -->
+
+
+<!-- Section Headshot gallery -->
+<section class="section-gallery py-36">
+    <div class="container wrapper">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-4">Stand out from the crowd</h1>
+        <p class="mb-16 text-center">Capture professional headshots and branding images that leave a lasting impression.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Image src={Headshot1} alt="Headshot photo of Sheila Wristberg" />
+            <Image src={Headshot2} alt="Headshot photo of Elizabeth Seddy" />
+            <Image src={Headshot3} alt="Headshot photo of Kamal deen Alhassan" />
+            <Image src={Headshot4} alt="Headshot photo of Daniel Sarkodie" />
+            <Image src={Headshot5} alt="Headshot photo of Francis" />
+            <Image src={Headshot6} alt="Headshot photo of Esther Timinca" />
+        </div>
+    </div>
+</section>
+<!-- End of section gallery -->
+
+
+<!-- What is included -->
+<section class="section-included pb-32 pt-24">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-primary text-center">What's Included</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <Image src={VIP} alt="What is included in headshot" />
+            </div>
+            <div>
+                <h1 class="text-xl md:text-2xl font-extrabold mb-4">What’s Included with Your Headshot Session:</h1>
+                <ul class="list-disc ml-12">
+                    <li class="mb-4">Up to 2 hours of photoshoot time. Use the full time or you can be in-and-out in 30 minutes…it’s up to you!</li>
+                    <li class="mb-4">Expert coaching on your expression and posing. (We can help you get amazing results even if you don’t think you’re “photogenic”)</li>
+                    <li class="mb-4">Fast editing turnaround time (1 business day to 3 business day) available upon request.</li>
+                    <li class="mb-4">Final photos include custom high-end editing (teeth whitening, bags under eyes, acne, stray hairs etc) and can be as “natural” or “polished” as you like.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of what is included -->
+
+
+<!-- Section ready to go -->
+<ReadyBanner />
+
+
+    <Footer />
+</MainLayout>
+
+
+
+
+<style lang=scss>
+    .section-hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(/vip-bg.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    .hero-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+  }
+</style>

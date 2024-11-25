@@ -1,0 +1,137 @@
+---
+
+import MainLayout from "~/layouts/MainLayout.astro";
+import Navigation from "~/components/navigation.astro";
+import { Image } from "astro:assets";
+
+import Footer from "~/components/footer.astro";
+
+import AboutStudio from "~/assets/about-studio.png";
+import Studio1 from "~/assets/studio-1.png";
+import Studio2 from "~/assets/studio-2.png";
+import StudioBanner from "~/components/studio-banner.astro";
+import StudioPricing from "~/components/studio-pricing.astro";
+import StudioFaq from "~/components/studio-faq.astro";
+---
+
+
+
+
+
+
+<MainLayout title="Segula Global | The Studio" >
+    <Navigation />
+
+    <section class="section-hero">
+        <div class="container wrapper">
+            <div class="w-full h-full hero-content text-center flex align-center flex-col justify-center flex-wrap">
+                <h1 class="text-8xl md:text-8xl font-extrabold">The Studio</h1>
+                <p class="my-8">Our well equipped studio is designed for professional headshots, videos, and high-quality podcast production</p>
+                <div>
+                    <a href="#studio-options" class="btn btn-yellow ">Studio Options</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Studio -->
+    <section class="about-studio py-24">
+        <div class="container wrapper">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <Image src={AboutStudio} alt="Segula Global Studio" />
+                </div>
+                <div>
+                    <p class="mb-8">We’re passionate about creating immersive media experiences that bring your brand to life. Our fully equipped studio is designed for professional headshots, video content, and podcast production, offering a versatile space for all your creative needs. Located in the heart of East Legon, Accra, Ghana, our studio serves as a hub where you can capture your stories in a professional, comfortable environment.</p>
+
+                    <p>But we don’t stop at the studio. We understand that some stories are best told in unique settings, so we’re more than happy to take our expertise on the road, capturing visuals and audio that resonate with your brand in any location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of about studio -->
+
+
+
+
+    <!-- Studio Options -->
+    <section class="section-options py-24" id="studio-options">
+        <div class="container wrapper">
+            <div class="text-center">
+                <h1 class="heading-primary">Our Studio Options</h1>
+            </div>
+
+            <!-- Studio 1 -->
+            <div class="studio-1 grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-solid border-gray-300 border-b pb-16">
+                <div class="col-span-2">
+                    <Image src={Studio1} alt="Solo Podcast Studio" />
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl">Studio 1</h3>
+                    <p>Photography and Video Studio</p>
+                    <ul class="list-disc ml-8 mb-8">
+                        <li>High-Quality Lighting Setup</li>
+                        <li>Green Screen & Backdrops</li>
+                        <li>Premium Camera Equipment</li>
+                    </ul>
+                    <a href="#" class="btn btn-neutral">Book now</a>
+                </div>
+            </div>
+
+
+            <!-- Studio-2 -->
+            <div class="studio-1 grid grid-cols-1 md:grid-cols-3 gap-8 items-center pt-16">
+                <div>
+                    <h3 class="font-bold text-xl">Studio 2</h3>
+                    <p>Podcast & Recording Studio</p>
+                    <ul class="list-disc ml-8 mb-8">
+                        <li>Broadcast-Quality Microphones</li>
+                        <li>Various Seating Options</li>
+                        <li>On-site Assistance</li>
+                    </ul>
+                    <a href="#" class="btn btn-neutral">Book now</a>
+                </div>
+                <div class="col-span-2">
+                    <Image src={Studio2} alt="Solo Podcast Studio" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of studio options -->
+
+    <!-- our Studio pricing -->
+     <!-- <StudioPricing /> -->
+
+    <!-- Studio Banner -->
+    <StudioBanner />
+
+    <!-- Studio Faq -->
+     <StudioFaq />
+
+    <Footer />
+
+</MainLayout>
+
+
+
+
+
+
+
+<!-- style -->
+<style>
+    .section-hero {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/hero-bg.png);
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+    }
+
+    .about-studio {
+        background-color: var(--clr-green);
+        color: var(--clr-white);
+    }
+</style>

@@ -1,0 +1,319 @@
+---
+import Navigation from "~/components/navigation.astro"
+import MainLayout from "~/layouts/MainLayout.astro"
+import LinkedinBanner from "~/components/linkedin-banner.astro";
+import Footer from "~/components/footer.astro";
+
+import { Image } from "astro:assets";
+
+import Headshot1 from "../assets/headshot-1.png"
+import Headshot2 from "../assets/headshot-2.png"
+import Headshot3 from "../assets/headshot-3.png"
+import Headshot4 from "../assets/headshot-4.png"
+import Headshot5 from "../assets/headshot-5.png"
+import Headshot6 from "../assets/headshot-6.png"
+
+// Headshot types
+import VIP from "~/assets/vip-headshot.png";
+import HeadshotBooth from "~/assets/headshot-booths.png";
+import Service3 from "~/assets/linkedin-profile.png";
+---
+
+
+
+
+<MainLayout title="Headshot Session | Segula Global">
+<Navigation />
+
+<!-- Hero section -->
+<section class="section-hero">
+    <div class="container wrapper w-full h-full">
+      <div class="hero-text">
+        <h1 class="text-8xl md:text-8xl font-extrabold">Come alive</h1>
+        <h3 class="yellow-text text-2xl md:text-2xl font-bold my-8">HEADSHOTS</h3>
+        <a href="#" class="btn btn-neutral__white">Get Pricing</a>
+      </div>
+    </div>
+  </section>
+<!-- End of section hero -->
+
+
+
+
+<!-- Section Headshot gallery -->
+<section class="section-gallery py-36">
+    <div class="container wrapper">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Image src={Headshot1} alt="Headshot photo of Sheila Wristberg" />
+            <Image src={Headshot2} alt="Headshot photo of Elizabeth Seddy" />
+            <Image src={Headshot3} alt="Headshot photo of Kamal deen Alhassan" />
+            <Image src={Headshot4} alt="Headshot photo of Daniel Sarkodie" />
+            <Image src={Headshot5} alt="Headshot photo of Francis" />
+            <Image src={Headshot6} alt="Headshot photo of Esther Timinca" />
+        </div>
+    </div>
+</section>
+<!-- End of section gallery -->
+
+
+
+  <!-- What we do -->
+  <section class="section-service relative">
+    <div class="container wrapper">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="heading-primary">What We Do</h1>
+        <p class=" mb-24">Headshots are meant to capture the best version of you, and that is what you'll get. We create polished, authentic headshots that showcase your confidence and professionalism by guiding you through every step, ensuring you feel comfortable and natural in front of the camera. Book a session today to capture your best self! </p>
+      </div>
+
+    </div>
+  </section>
+
+
+<!-- This will be for the section of types of headshots -->
+<section class="section-items">
+    <div class="container wrapper">
+      <!-- Services -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 -mt-60">
+        <!-- Headshot -->
+        <div class="service">
+          <a href="/vip-headshots" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={VIP} alt="Headshot" class="service-img" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">VIP Headshots</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p class="md:text-sm">Perfect for executives, entrepreneurs, and industry leaders who need standout images that capture their confidence and professionalism.</p>
+            <a href="/vip-headshots" class="btn-thin">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Podcast -->
+        <div class="service">
+          <a href="/studio" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={HeadshotBooth} alt="Podcast production" class="service-img" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Photobooth</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p class="md:text-sm">Whether it's a corporate event, product launch, or celebration, we create memorable experiences with professional headshot and potrait booths.</p>
+            <a href="/studio" class="btn-thin">Learn More</a>
+          </div>
+    
+        </div>
+
+        <!-- LinkedIn Profile -->
+        <div class="service">
+          <a href="/linkedin" class="service-plus">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+    
+          <Image src={Service3} alt="LinkedIn profile optimisation." class="LinkedIn Profile Optimisation" />
+    
+          <div class="text-top absolute top-16 left-50% px-8 text-center w-full">
+            <p class="text-2xl md:text-2xl font-bold mb-4 text-center">Team Photography</p>
+          </div>
+    
+          <div class="text-bottom absolute bottom-4  px-8">
+            <p class="md:text-sm">On-site or studio sessions to highlight your team’s synergy, producing photos that are perfect for websites, marketing, and internal communications.</p>
+            <a href="/linkedin" class="btn-thin">Learn More</a>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of types of headshots -->
+
+
+
+<!-- The process -->
+<div class="section-process">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-primary">Process</h2>
+        </div>
+        <div class="max-w-4xl mx-auto">
+            <div data-ui-tablist class="ui-accordion" data-ui-transition="collapse">
+                <!-- process-1 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Planning</button>
+                    <div data-ui-tablist-tabpanel>
+                        <div class="ui-accordion-body"> With the planning, we will work closely with you to organize, schedule, and execute your headshots.
+                        <ul class="list-disc ml-12">
+                            <li>Define your style</li>
+                            <li>Select the Perfect Setting</li>
+                      
+                            <li>Schedule Your Session</li>
+                            <li>Manage the timeline</li>
+                        </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- process-2 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">The shoot</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Images are tethered into a computer on-site where you will be to able to approve of the images in real-time.</div>
+                    </div>
+                </div>
+
+                <!-- process-3 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Approve shots</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Images can be approved in real time during the session. Alternatively, after the session. Whichever works best for you.</div>
+                    </div>
+                </div>
+
+                <!-- process-4 -->
+                <div class="ui-accordion-item">
+                    <button data-ui-tablist-tab class="ui-accordion-header">Delivery</button>
+                    <div data-ui-tablist-tabpanel hidden>
+                        <div class="ui-accordion-body">Images are delivered to you as high-resolution JPEG files with all pre-agreed-upon usage rights.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End of the process -->
+
+
+<LinkedinBanner />
+
+<Footer />
+
+</MainLayout>
+
+
+
+
+<style lang="scss">
+
+
+.section-hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(/headshot-bg.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    .hero-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+  }
+
+
+
+
+//  Section Process
+.section-process {
+    // background-color: #90D0C2;
+    padding: 8rem 0;
+}
+
+.ui-accordion-header {
+    border-bottom: 1px solid #4a4a4a;
+    margin-bottom: 2rem;
+    background-color: var(--clr-green-dark);
+    color: #90D0C2;
+
+    &:hover {
+        color: var(--clr-yellow);
+    }
+}
+.ui-accordion-header:where(.ui-active) {
+    color: yellow;
+}
+.ui-accordion-body {
+    background-color: var(--clr-green-dark);
+    color: #fff;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+ // Section services, what we do
+ .section-service {
+    padding-top: 8rem;
+    padding-bottom: 15rem;
+    background-color: var(--clr-green-dark);
+    color: var(--clr-white);
+    width: 100%;
+  }
+  .service {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    transition: .2s;
+    // display: none;
+
+    &:hover,
+    &:focus {
+      transform: scale(.98)
+    }
+
+    &:hover .service-plus, 
+    &:focus .service-plus {
+      color: var(--clr-yellow);
+        background-color: var(--clr-green-dark);
+        border: 1px solid var(--clr-yellow);
+        transform: translateX(-50%) rotateZ(45deg)
+    }
+
+
+    &-plus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-green-dark);
+      background-color: var(--clr-yellow);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: .4s;
+      border: 1px solid transparent;
+
+      &:hover, &:focus {
+        color: var(--clr-yellow);
+        background-color: var(--clr-green-dark);
+        border: 1px solid var(--clr-yellow);
+        transform: translateX(-50%) rotateZ(45deg)
+      }
+    }
+
+    &-img {
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+</style>
