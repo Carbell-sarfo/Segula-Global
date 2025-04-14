@@ -1,0 +1,80 @@
+---
+import Navigation from "~/components/navigation.astro";
+import Footer from "~/components/footer.astro";
+import MainLayout from "~/layouts/MainLayout.astro";
+import CareerCard from "~/components/CareerCard.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+const allCareers: CollectionEntry<"careers">[] = (await getCollection("careers")).sort(
+  (a: CollectionEntry<"careers">, b: CollectionEntry<"careers">) =>
+    b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<MainLayout title="Join our team and shape the future of personal branding.">
+  <Navigation />
+
+<section class="section-hero">
+    <div class="container wrapper">
+        <div class="w-full h-full hero-content text-center flex align-center flex-col justify-center flex-wrap">
+            <h1 class="text-8xl md:text-8xl font-extrabold text-white">Careers</h1>
+            <p class="my-8 text-white">Dear <span class="font-bold italic yellow-text">rule-breakers</span>, <span class="font-bold italic yellow-text">outside-the-box thinkers</span>, kids who disappointed their African parents by not doing law or science at University: we want you!</p>
+        </div>
+    </div>
+   </section>
+  <!-- Section Hero -->
+
+
+  <!-- section join -->
+   <section class="section-joing py-20 border border-b-2 border-gray-200">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-4 max-w-5xl mx-auto">Join our team and shape the future of personal branding.</h1>
+        </div>
+        <p class="max-w-5xl mx-auto">So you’re interested in working at Segula Ghana. We would love to have you on our team! Please send a CV, cover letter and portfolio (if applicable) to talent@socialghana.com, and then fill out the form below to help us get to know you better. All the best!</p>
+    </div>
+   </section>
+  <!-- end of section join -->
+
+
+
+  <!-- section career listing -->
+   <section class="section-listing py-36">
+    <div class="container wrapper">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-4 max-w-5xl mx-auto">Opportunities</h1>
+        <p class="max-w-5xl mx-auto mb-20">We’re on the lookout for some awesome people to join our team! Check out these exciting opportunities:</p>
+
+        <div class="career-list max-w-5xl mx-auto">
+            {allCareers.map((career) => <CareerCard career={career}/>)}
+        </div>
+    </div>
+   </section>
+  <!-- end of career listing -->
+
+
+  <Footer />
+</MainLayout>
+
+
+
+<style lang="scss">
+
+    .section-hero {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, var(--clr-green-dark), var(--clr-green));
+
+        .hero-content {
+            max-width: 1000px;
+            margin-inline: auto;
+        }
+    }
+
+
+
+
+
+    .section-listing {
+    }
+</style>

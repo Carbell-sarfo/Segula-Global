@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  career: CollectionEntry<"careers">;
+};
+
+const { career } = Astro.props;
+---
+
+<a href={'/careers/' + career.slug} class="block">
+<div class="career-item">
+  <div class="flex items-center justify-between mb-8">
+    <h3 class="text-3xl md:text-xl font-extrabold">{career.data.title}</h3>
+    <a href={"/careers/" + career.slug} class="btn">Apply Now</a>
+  </div>
+  <ul class="details">
+    <li>
+      <span>Work Time</span>
+      {career.data.workTime}
+    </li>
+    <li>
+      <span>Location</span>
+      {career.data.location}
+    </li>
+  </ul>
+</div>
+</a>
+
+<style lang="scss">
+  .career-item {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #929292;
+    transition: 0.3s ease-out;
+    margin-bottom: 2rem;
+
+    &:hover,
+    &:focus {
+      background-color: var(--clr-green-light);
+    }
+
+    .btn {
+      background-color: var(--clr-green-light);
+      color: var(--clr-green-dark);
+    }
+
+    .details {
+      display: flex;
+      gap: 3rem;
+
+      li {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-size: 0.8rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+</style>

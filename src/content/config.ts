@@ -11,6 +11,21 @@ const showcase = defineCollection({
     }),
 });
 
+
+// Collection for Careers
+const careersCollection = defineCollection({
+  type: "content",
+  schema: ({image}) => z.object ({
+    title: z.string(),
+    workTime: z.string(),
+    jobCategory: z.string(),
+    location: z.string(),
+    author: z.string(),
+    pubDate: z.date()
+  })
+})
+
 export const collections = {
   showcase,
+  careers: careersCollection
 };

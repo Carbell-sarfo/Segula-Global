@@ -1,0 +1,245 @@
+---
+import MainLayout from "~/layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { content } from "tailwind.config.cjs";
+import Navigation2 from "~/components/navigation-2.astro";
+import Footer from "~/components/footer.astro";
+
+export const getStaticPaths = async () => {
+  const allCareers = await getCollection("careers");
+  return allCareers.map((career) => ({
+    params: { slug: career.slug },
+    props: { career },
+  }));
+};
+
+type Props = {
+    career: CollectionEntry<'careers'>;
+}
+const { career } = Astro.props;
+const { Content } = await career.render();
+---
+
+
+<MainLayout title={'Segula Global Career |' + career.data.title}>
+
+    <!-- navigation -->
+    <Navigation2 />
+
+    <section class="max-w-5xl mx-auto px-12 pt-40 pb-28">
+
+        <!-- Title & details of Job posting -->
+        <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-8 max-w-5xl mx-auto">{career.data.title}</h1>
+        <ul class="flex gap-8 mb-12 items-center justify-between">
+            <li class="flex flex-col">
+                <span class="text-gray-400 text-sm/relaxed">Work Time</span>
+                {career.data.workTime}
+            </li>
+            <li class="flex flex-col">
+                <span class="text-gray-400 text-sm/relaxed">Job Category</span>
+                {career.data.jobCategory}
+            </li>
+            <li class="flex flex-col">
+                <span class="text-gray-400 text-sm/relaxed">Location</span>
+                {career.data.location}
+            </li>
+        </ul>
+
+        <!-- About Segula Global -->
+         <div class="py-16 mb-16 border-b border-b-2 border-gray-300">
+            <h1 class="text-xl md:text-2xl font-extrabold text-left mb-4 max-w-5xl mx-auto">About Segula Global</h1>
+            <p class="mb-4">At Segula Global, we pride ourselves on our ability to think outside the box and bring fresh and relevant perspectives to every brand we work with. We combine our expertise with a deep understanding of consumer behavior to deliver impactful and results-driven content. 
+            </p>
+            <p>
+                Our team consists of talented individuals who are passionate about creativity, innovation, and delivering exceptional results. Our services include branding and design, social media marketing, traditional marketing and production.
+            </p>
+         </div>
+
+        <Content />
+
+
+    </section>
+
+
+    <!-- Footer -->
+     <Footer />
+
+</MainLayout>
+
+
+<style lang="scss">
+    /* // ============= INDIVIDUAL BLOG PAGE ==================== */
+    .individual-article__page {
+      padding: 5rem 0 10rem;
+
+      .flow {
+        max-width: 800px;
+        padding-inline: 2rem;
+        margin-inline: auto;
+      }
+
+      /* // Title */
+      .blog-heading {
+        font-size: 4rem;
+        font-weight: medium;
+        line-height: 1;
+      }
+
+      /* // Description */
+      .blog-subheading {
+        color: var(--clr-gray-light);
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        font-weight: normal;
+        line-height: 1.5;
+      }
+
+      // image
+      .main-article__figure {
+        margin: 1rem auto;
+        margin-bottom: 3rem;
+        padding: 0;
+        height: auto;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 2rem;
+      }
+
+      // Author and date
+      .author {
+        text-transform: capitalize;
+        color: darkgray;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem;
+        margin: 2rem 0;
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+        font-size: 1rem;
+        border-block: 2px solid var(--clr-gray-light);
+        padding-block: 2rem;
+
+        .author-name {
+          color: var(--clr-black);
+          font-weight: bold;
+        }
+
+        &__image {
+          display: flex;
+          align-items: center;
+
+          p {
+            line-height: 1.5;
+          }
+        }
+
+        img {
+          width: 40px;
+          height: auto;
+          margin-right: 1rem;
+        }
+        p {
+          // display: inline-block;
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+      .blog-share__list {
+        list-style: none;
+      }
+
+      // Ruler
+      hr {
+        margin: 2rem 0 4rem;
+      }
+
+      h1 {
+        margin-bottom: 0.5rem;
+        margin-top: 3rem;
+        // font-family: 'Yellowtail', cursive;
+        letter-spacing: 2px;
+      }
+      .heading-secondary {
+        // font-family: 'Oswald', sans-serif;
+        letter-spacing: 0px;
+      }
+
+      // paragraphs
+      p {
+        margin-bottom: 3rem;
+      }
+
+      // Blockquotes
+      blockquote {
+        padding-left: 4rem;
+        color: var(--clr-gray);
+        font-size: 2.5rem;
+        line-height: 1.5;
+        margin: 4rem 0;
+        border-left: 5px solid var(--clr-primary);
+        border-radius: 1px;
+      }
+
+      // links
+      a {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        color: var(--clr-black);
+        padding: 0 0.5rem;
+
+        &:hover {
+          color: var(--clr-white);
+        }
+
+        &:hover::after {
+          top: 0;
+          height: 100%;
+        }
+
+        &::after {
+          content: "";
+          width: calc(100% + 1rem);
+          height: 10%;
+          background: var(--clr-primary);
+          position: absolute;
+          top: 100%;
+          left: -0.5rem;
+          transition: 0.2s ease;
+          z-index: -1;
+          border-radius: 2px;
+        }
+      }
+
+      // images
+      img {
+        width: 100%;
+        height: auto;
+        line-height: 1;
+        border-radius: 2rem;
+      }
+    }
+
+    // media queries
+    @media screen and (max-width: 600px) {
+      .individual-article__page {
+        .main-article__figure {
+          &::before,
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1019px) {
+      .individual-article__page {
+        // Title
+        .blog-heading {
+          font-size: 3rem;
+        }
+      }
+    }
+  </style>
