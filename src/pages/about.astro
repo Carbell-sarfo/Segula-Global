@@ -1,0 +1,196 @@
+---
+import Navigation from "~/components/navigation.astro";
+import Footer from "~/components/footer.astro";
+import MainLayout from "~/layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+
+import Carbell from "../assets/carbell-sarfo.png";
+import Winnard from "../assets/winnard-bansah.png";
+import Joshua from "../assets/joshua-awuro.png";
+import Richmond from "../assets/richmond-duah.png";
+import Sheila from "../assets/sheila-wristberg.png";
+import { array } from "astro:schema";
+
+const teams: Array<member> = [
+  {
+    name: "Carbell Sarfo",
+    title: "Managing Director",
+    image: Carbell,
+    details:
+      "egula's mission is to empower professionals and thought leaders by creating authentic, impactful digital identities that drive connection, inspire trust, and amplify influence",
+    linkedin: "https://www.linkedin.com/in/carbellsarfo/",
+    website: "https://carbellsarfo.netlify.app/",
+    instagram: "https://www.instagram.com/carbellsarfo/",
+  },
+  {
+    name: "Sheila Wristberg",
+    title: "Lead Generation",
+    image: Sheila,
+    details:
+      "egula's mission is to empower professionals and thought leaders by creating authentic, impactful digital identities that drive connection, inspire trust, and amplify influence",
+    linkedin: "https://www.linkedin.com/in/sheila-wristberg-b10a3515/",
+    website: "http://sheilawristberg.com/",
+    instagram: "https://www.instagram.com/sheilawristberg/",
+  },
+  {
+    name: "Richmond Duah",
+    title: "Lead Generation",
+    image: Richmond,
+    details:
+      "egula's mission is to empower professionals and thought leaders by creating authentic, impactful digital identities that drive connection, inspire trust, and amplify influence",
+    linkedin: "https://www.linkedin.com/in/richmondduah/",
+    website: "https://richmondduah.netlify.app/",
+    instagram: "https://www.instagram.com/rich.mondduah/",
+  },
+  {
+    name: "Winnard Bansah",
+    title: "Lead Generation",
+    image: Winnard,
+    details:
+      "egula's mission is to empower professionals and thought leaders by creating authentic, impactful digital identities that drive connection, inspire trust, and amplify influence",
+    linkedin: "https://www.linkedin.com/in/winnardbansah/",
+    website: "https://winnardbansah.netlify.app/",
+    instagram: "https://www.instagram.com/winnardbansah/",
+  },
+  {
+    name: "Joshua Awuro-Sampuo",
+    title: "Lead Generation",
+    image: Joshua,
+    details:
+      "egula's mission is to empower professionals and thought leaders by creating authentic, impactful digital identities that drive connection, inspire trust, and amplify influence",
+    linkedin: "https://www.linkedin.com/feed/",
+    website: "https://github.com/joshuawuro",
+    instagram: "https://www.instagram.com/_joshuawuro",
+  },
+];
+---
+
+<MainLayout
+  title="About | Segula Global Ltd"
+  description="Segula's mission is to empower professionals and thought leaders by creating authentic, impactful digital identities that drive connection, inspire trust, and amplify influence."
+>
+  <Navigation />
+
+  <div class="section-hero"></div>
+
+  <div class="section-team" id="team">
+    <div class="container wrapper">
+      <h1
+        class="text-3xl md:text-4xl font-extrabold text-center mb-4 max-w-5xl mx-auto"
+      >
+        Our Team
+      </h1>
+      <p class="max-w-5xl mx-auto text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ullam,
+        illum illo dolorum a alias.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+          {
+            teams.map((team) => (
+              <div class="member">
+                <div class="member-head">
+                  <Image src={team.image} alt={team.name}/>
+                  <h3>{team.name}</h3>
+                  <p>{team.title}</p>
+                </div>
+                <div class="member-details">
+                  <p class="px-4">{team.details}</p>
+                </div>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a href={team.linkedin} class="social-link">
+                      <i class="fa-brands fa-linkedin-in" />
+                    </a>
+                  </li>
+                  <li class="social-item">
+                    <a href={team.website} class="social-link">
+                      <i class="fa-solid fa-earth-africa" />
+                    </a>
+                  </li>
+                  <li class="social-item">
+                    <a href={team.instagram} class="social-link">
+                      <i class="fa-brands fa-instagram" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            ))
+          }
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</MainLayout>
+
+<style lang="scss">
+  .section-team {
+    padding: 7rem 0;
+  }
+  .member {
+    background-color: #f8f8f8;
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid #b3b3b3;
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    &-head {
+      margin-bottom: 2rem;
+
+      img {
+        // width: 100%;
+        display: inline-block;
+        margin-bottom: 1rem;
+        max-width: 250px;
+      }
+
+      h3 {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      p {
+        color: var(--clr-green);
+        font-size: 1rem;
+      }
+    }
+
+    .social-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+
+      .social-item {
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+
+      .social-link {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        align-items: center;
+        justify-content: center;
+        background-color: #d8d8d8;
+        border: 2px solid #cdcdcd;
+        border-radius: 50%;
+        color: var(--clr-white);
+        transition: 0.4s ease-out;
+
+        &:hover,
+        &:focus {
+          color: var(--clr-white);
+          background-color: var(--clr-green);
+        }
+      }
+    }
+  }
+</style>
