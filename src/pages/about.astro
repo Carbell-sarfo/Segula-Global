@@ -9,9 +9,12 @@ import Winnard from "../assets/winnard-bansah.png";
 import Joshua from "../assets/joshua-awuro.png";
 import Richmond from "../assets/richmond-duah.png";
 import Sheila from "../assets/sheila-wristberg.png";
-import { array } from "astro:schema";
 
-const teams: Array<member> = [
+import ValuesImg from "../assets/about-studio.png"
+// import { array } from "astro:schema";
+// import type { Member } from "~/types";
+
+const teams: Array<Member> = [
   {
     name: "Carbell Sarfo",
     title: "Managing Director",
@@ -71,8 +74,63 @@ const teams: Array<member> = [
 >
   <Navigation />
 
-  <div class="section-hero"></div>
+  <!-- Section hero -->
+  <section class="section-hero">
+    <div class="container wrapper">
+        <div class="w-full h-full hero-content text-center flex align-center flex-col justify-center flex-wrap">
+            <h1 class="text-8xl md:text-8xl font-extrabold text-white">Careers</h1>
+            <p class="my-8 text-white">Dear <span class="font-bold italic yellow-text">rule-breakers</span>, <span class="font-bold italic yellow-text">outside-the-box thinkers</span>, kids who disappointed their African parents by not doing law or science at University: we want you!</p>
+        </div>
+    </div>
+   </section>
+  <!-- Section Hero -->
 
+  <!-- section Values -->
+  <section class="section-values">
+    <div class="container wrapper">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div>
+          <Image src={ValuesImg} alt="Segula Global's values" />
+        </div>
+        <div>
+          <h1
+        class="text-3xl md:text-4xl font-extrabold mb-4 max-w-5xl mx-auto"
+      >
+        Our Values
+      </h1>
+          <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fuga consequatur minus, placeat expedita ipsam.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi beatae accusamus debitis delectus recusandae minus eligendi fugit amet praesentium soluta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- section Mission -->
+    <section class="section-mission py-32 border-b border-gray-400">
+      <div class="container wrapper">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+          <div>
+            <Image src={ValuesImg} alt="Segula Global's values" />
+          </div>
+          <div>
+            <h1
+        class="text-3xl md:text-4xl font-extrabold mb-4 max-w-5xl mx-auto"
+      >
+        Our Mission
+      </h1>
+            <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fuga consequatur minus, placeat expedita ipsam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi beatae accusamus debitis delectus recusandae minus eligendi fugit amet praesentium soluta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+  <!-- Section Team members -->
   <div class="section-team" id="team">
     <div class="container wrapper">
       <h1
@@ -121,10 +179,62 @@ const teams: Array<member> = [
     </div>
   </div>
 
+
+
+
+
+  <!-- join out team -->
+  <section class="section-join">
+    <div class="container wrapper">
+      <div class="text-center max-w-5xl mx-auto">
+        <h1
+        class="text-3xl md:text-4xl font-extrabold text-center mb-4 max-w-5xl mx-auto"
+      >
+        Join Our Team
+      </h1>
+            <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fuga consequatur minus, placeat expedita ipsam.</p>
+            <a href="/careers" class="btn btn-yellow">Our Openings</a>
+      </div>
+    </div>
+  </section>
   <Footer />
 </MainLayout>
 
 <style lang="scss">
+
+  // Section Hero
+  .section-hero {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, var(--clr-green-dark), var(--clr-green));
+
+        .hero-content {
+            max-width: 1000px;
+            margin-inline: auto;
+        }
+    }
+
+
+    // Section values
+    .section-values {
+      background-color: var(--clr-green);
+      padding: 8rem 0 10rem;
+      color: var(--clr-white);
+    }
+
+
+
+    // section join
+    .section-join {
+      background-color: var(--clr-green-light);
+      padding: 5rem 0;
+    }
+
+
+
+
+
+    
   .section-team {
     padding: 7rem 0;
   }
