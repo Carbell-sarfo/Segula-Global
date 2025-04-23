@@ -18,8 +18,8 @@ const allCareers: CollectionEntry<"careers">[] = (await getCollection("careers")
 <section class="section-hero">
     <div class="container wrapper">
         <div class="w-full h-full hero-content text-center flex align-center flex-col justify-center flex-wrap">
-            <h1 class="text-8xl md:text-8xl font-extrabold text-white">Careers</h1>
-            <p class="my-8 text-white">Dear <span class="font-bold italic yellow-text">rule-breakers</span>, <span class="font-bold italic yellow-text">outside-the-box thinkers</span>, kids who disappointed their African parents by not doing law or science at University: we want you!</p>
+            <h1 class="text-8xl md:text-6xl font-extrabold text-white">Careers at Segula Global</h1>
+            <p class="my-8 text-white">If you're looking for an <span class="font-bold italic yellow-text">opportunity to grow, create, and contribute to meaningful projects,</span> <span class="font-bold italic yellow-text"></span> we want you to join us!</p>
         </div>
     </div>
    </section>
@@ -30,9 +30,9 @@ const allCareers: CollectionEntry<"careers">[] = (await getCollection("careers")
    <section class="section-joing py-20 border border-b-2 border-gray-200">
     <div class="container wrapper">
         <div class="text-center">
-            <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-4 max-w-5xl mx-auto">Join our team and shape the future of personal branding.</h1>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-4 max-w-5xl mx-auto">Be Part of the Team That’s Redefining Branding.</h1>
         </div>
-        <p class="max-w-5xl mx-auto">So you’re interested in working at Segula Ghana. We would love to have you on our team! Please send a CV, cover letter and portfolio (if applicable) to talent@socialghana.com, and then fill out the form below to help us get to know you better. All the best!</p>
+        <p class="max-w-5xl mx-auto">Thinking about joining Segula Global? We’re excited to connect with passionate and creative minds like yours! Send your CV, a cover letter, and your portfolio (if you have one) to segulaglobal@gmail.com. Then, take a moment to fill out the form below — it helps us learn more about you. We can’t wait to hear from you. Good luck!</p>
     </div>
    </section>
   <!-- end of section join -->
@@ -43,7 +43,7 @@ const allCareers: CollectionEntry<"careers">[] = (await getCollection("careers")
    <section class="section-listing py-36">
     <div class="container wrapper">
         <h1 class="text-3xl md:text-4xl font-extrabold text-center mb-4 max-w-5xl mx-auto">Opportunities</h1>
-        <p class="max-w-5xl mx-auto mb-20">We’re on the lookout for some awesome people to join our team! Check out these exciting opportunities:</p>
+        <p class="max-w-5xl mx-auto mb-20">We’re always looking for creative, driven individuals to join our team. Check out these exciting opportunities:</p>
 
         <div class="career-list max-w-5xl mx-auto">
             {allCareers.map((career) => <CareerCard career={career}/>)}
