@@ -10,6 +10,17 @@ import Joshua from "../assets/joshua-awuro.png";
 import Richmond from "../assets/richmond-duah.png";
 import Sheila from "../assets/sheila-wristberg.png";
 
+// Our Clients
+import Irisk from "../assets/partner-irisk.png";
+import Nsia from "../assets/partner-nsia.png";
+import Ibag from "../assets/partner-ibag.png";
+import Wliafrica from "../assets/partner-wliafrica.png";
+import NGI from "../assets/partner-ngi.png";
+import Coronation from "../assets/partner-coronation.png";
+import Swristberg from "../assets/partner-sheila.png";
+import Aceltrim from "../assets/partner-aceltrim.png";
+import APL from "../assets/partner-apl.png";
+
 import ValuesImg from "../assets/about-studio.png"
 // import { array } from "astro:schema";
 // import type { Member } from "~/types";
@@ -32,7 +43,7 @@ const teams: Array<Member> = [
     details:
       "egula's mission is to empower professionals and thought leaders by creating authentic, impactful digital identities that drive connection, inspire trust, and amplify influence",
     linkedin: "https://www.linkedin.com/in/sheila-wristberg-b10a3515/",
-    website: "http://sheilawristberg.com/",
+    website: "https://sheilawristberg.com/",
     instagram: "https://www.instagram.com/sheilawristberg/",
   },
   {
@@ -197,6 +208,35 @@ const teams: Array<Member> = [
       </div>
     </div>
   </section>
+
+
+  <!-- Section clients -->
+  <section class="section-client py-28" id="clients">
+    <div class="container wrapper">
+      <h1
+        class="text-3xl md:text-4xl font-extrabold text-center mb-12 max-w-5xl mx-auto"
+      >
+        Our Clients
+      </h1>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <Image src={Irisk} alt="Irisk Management Ltd" />
+        <Image src={Wliafrica} alt="Women Leadership In Insurance Africa" />
+        <Image src={Ibag} alt="Insurance Brokers Association of Ghana (IBAG)" />
+        <Image src={Nsia} alt="NSIA Insurance Ghana" />
+        <Image src={Aceltrim} alt="Aceltrim Ghana" />
+        <Image src={Coronation} alt="Coronation Insurance Ghana" />
+        <Image src={NGI} alt="Nothern Girl Initiative" />
+        <Image src={Swristberg} alt="Sheila Wristberg" />
+        <Image src={APL} alt="Africa Policy Lens" />
+      </div>
+    </div>
+  </section>
+  <!-- End of section clients -->
+
+
+
+
+  <!-- Section Footer -->
   <Footer />
 </MainLayout>
 
@@ -300,6 +340,22 @@ const teams: Array<Member> = [
           color: var(--clr-white);
           background-color: var(--clr-green);
         }
+      }
+    }
+  }
+
+
+
+
+
+  // Section Clients
+  .section-client {
+
+
+    img {
+      transition: .4s;
+      &:hover, &:focus {
+        transform: translateY(-5px);
       }
     }
   }
